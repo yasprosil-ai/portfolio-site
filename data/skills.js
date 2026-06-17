@@ -1,5 +1,4 @@
 import {
-  Blocks,
   Bot,
   BrainCircuit,
   Code2,
@@ -9,6 +8,7 @@ import {
   Lightbulb,
   Rocket,
   Send,
+  Server,
   Sparkles,
 } from "lucide-react";
 
@@ -52,17 +52,22 @@ export const skillGroups = [
   {
     title: "Разработка",
     icon: Code2,
-    items: ["HTML", "CSS", "JavaScript", "React", "Next.js", "Tailwind CSS"],
+    items: ["HTML", "CSS", "JavaScript", "TypeScript", "React", "Next.js", "Tailwind CSS"],
   },
   {
     title: "Telegram",
     icon: Send,
-    items: ["Telegram Bot API", "сценарии ботов", "кнопки и меню", "сбор заявок", "уведомления"],
+    items: ["Telegram Bot API", "aiogram", "сценарии и FSM", "приём оплат", "подтверждение платежей", "вебхуки"],
   },
   {
     title: "AI / вайбкодинг",
     icon: BrainCircuit,
-    items: ["ChatGPT", "Codex", "Cursor", "проектирование промптов", "генерация структуры", "быстрая сборка MVP"],
+    items: ["Claude / Anthropic API", "распознавание по фото", "проектирование промптов", "ChatGPT", "Codex", "Cursor"],
+  },
+  {
+    title: "Бэкенд / инфраструктура",
+    icon: Server,
+    items: ["Python", "Flask", "Supabase", "Docker", "Fly.io", "Render"],
   },
   {
     title: "Продуктовая логика",
@@ -73,8 +78,8 @@ export const skillGroups = [
 
 export const aboutFacts = [
   { text: "собираю сайты и лендинги", icon: Globe },
-  { text: "проектирую Telegram-ботов", icon: Bot },
-  { text: "делаю мини-аппы под задачу", icon: Blocks },
+  { text: "делаю Telegram-ботов с приёмом оплат", icon: Bot },
+  { text: "встраиваю AI на базе Claude", icon: BrainCircuit },
   { text: "использую AI как рабочий инструмент", icon: Sparkles },
   { text: "люблю быстрые MVP и реальные эксперименты", icon: Lightbulb },
 ];
