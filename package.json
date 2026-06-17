@@ -1,0 +1,22 @@
+{
+  "name": "portfolio-site",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "next dev -H 127.0.0.1",
+    "build": "next build",
+    "start": "next start -H 127.0.0.1"
+  },
+  "dependencies": {
+    "@tailwindcss/postcss": "^4.1.17",
+    "lucide-react": "^0.468.0",
+    "next": "^16.1.1",
+    "react": "^19.2.1",
+    "react-dom": "^19.2.1",
+    "tailwindcss": "^4.1.17"
+  },
+  "overrides": {
+    "postcss": "^8.5.10"
+  }
+}
