@@ -8,7 +8,7 @@ export default function Hero() {
         <div className="hero-spotlight absolute -top-28 left-1/2 h-[42rem] w-[86rem] max-w-none -translate-x-1/2 opacity-100" />
         <div className="absolute left-1/2 top-0 h-px w-[min(80rem,92vw)] -translate-x-1/2 bg-gradient-to-r from-transparent via-amber-200/70 to-transparent" />
         <div className="absolute bottom-0 right-0 h-[28rem] w-[38rem] bg-[radial-gradient(circle,rgba(37,99,235,0.16),transparent_62%)]" />
-        <div className="absolute bottom-0 inset-x-0 h-48 bg-gradient-to-b from-transparent to-[#050914]" />
+        <div className="absolute bottom-0 inset-x-0 h-64 bg-[#050914]" />
       </div>
 
       <div className="mx-auto grid min-h-[calc(96dvh-5rem)] w-full max-w-7xl grid-cols-1 items-center gap-12 px-4 py-10 sm:px-6 lg:grid-cols-[minmax(0,1.12fr)_minmax(0,0.88fr)] lg:px-8 lg:py-14">
