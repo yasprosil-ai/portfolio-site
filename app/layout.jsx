@@ -9,7 +9,6 @@ export default function RootLayout({ children }) {
   return (
     <html lang="ru">
       <body>
-        <div className="site-dots" aria-hidden="true" />
         {children}
       </body>
     </html>
