@@ -1,8 +1,7 @@
 import Link from "next/link";
 import Header from "../../components/Header.jsx";
 import Footer from "../../components/Footer.jsx";
-import ProjectCard from "../../components/ProjectCard.jsx";
-import { projectCategories, projects } from "../../data/projects.js";
+import ProjectsFilter from "../../components/ProjectsFilter.jsx";
 
 export const metadata = {
   title: "Все работы | Я спросил у ИИ",
@@ -30,40 +29,10 @@ export default function ProjectsPage() {
               >
                 Вернуться на главную
               </Link>
-              <a
-                href="#all-projects"
-                className="inline-flex min-h-12 items-center justify-center rounded-lg border border-white/12 px-5 text-sm font-semibold text-white transition hover:border-white/30 hover:bg-white/5 active:translate-y-px"
-              >
-                Смотреть список
-              </a>
             </div>
           </div>
 
-          <div id="all-projects" className="grid gap-12">
-            {projectCategories.map((category) => {
-              const items = projects.filter((project) => project.category === category);
-
-              return (
-                <section key={category} className="grid gap-6">
-                  <div className="flex flex-col gap-3 border-b border-white/10 pb-5 sm:flex-row sm:items-end sm:justify-between">
-                    <div>
-                      <p className="text-xs font-semibold uppercase tracking-[0.18em] text-cyan-300">Категория</p>
-                      <h2 className="mt-3 text-3xl font-semibold text-white">{category}</h2>
-                    </div>
-                    <p className="max-w-2xl text-sm leading-6 text-slate-400">
-                      {items.length} {items.length === 1 ? "проект" : items.length < 5 ? "проекта" : "проектов"} в этой категории.
-                    </p>
-                  </div>
-
-                  <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
-                    {items.map((project) => (
-                      <ProjectCard key={project.slug} project={project} primaryHref="/#contact" secondaryHref="/#contact" />
-                    ))}
-                  </div>
-                </section>
-              );
-            })}
-          </div>
+          <ProjectsFilter />
         </div>
       </main>
       <Footer />
