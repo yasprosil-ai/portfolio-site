@@ -2,7 +2,7 @@ import { aboutFacts } from "../data/skills.js";
 
 export default function AboutSection() {
   return (
-    <section id="about" className="border-y border-white/8 bg-white/[0.015] px-4 py-24 sm:px-6 lg:px-8">
+    <section id="about" className="px-4 py-24 sm:px-6 lg:px-8">
       <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.88fr_1.12fr] lg:items-start">
         <div className="grid gap-6">
           <SectionIntro eyebrow="Обо мне" title="Быстро превращаю идеи в проверяемые MVP" />

@@ -2,7 +2,7 @@ import { services } from "../data/services.js";
 
 export default function ServicesSection() {
   return (
-    <section id="services" className="border-y border-white/8 bg-white/[0.015] px-4 py-24 sm:px-6 lg:px-8">
+    <section id="services" className="px-4 py-24 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-7xl">
         <SectionIntro
           eyebrow="Услуги"
