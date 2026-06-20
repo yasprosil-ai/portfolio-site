@@ -5,7 +5,6 @@ export default function Hero() {
   return (
     <section id="top" className="relative min-h-[100dvh] w-full max-w-full overflow-hidden pt-20">
       <div className="absolute inset-0 -z-10">
-        <div className="dot-grid absolute inset-0 opacity-[0.58]" />
         <div className="hero-spotlight absolute -top-28 left-1/2 h-[42rem] w-[86rem] max-w-none -translate-x-1/2 opacity-100" />
         <div className="absolute left-1/2 top-0 h-px w-[min(80rem,92vw)] -translate-x-1/2 bg-gradient-to-r from-transparent via-amber-200/70 to-transparent" />
         <div className="absolute bottom-0 right-0 h-[28rem] w-[38rem] bg-[radial-gradient(circle,rgba(37,99,235,0.16),transparent_62%)]" />
