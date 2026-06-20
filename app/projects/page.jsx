@@ -5,8 +5,8 @@ import ProjectCard from "../../components/ProjectCard.jsx";
 import { projectCategories, projects } from "../../data/projects.js";
 
 export const metadata = {
-  title: "Все работы | Yasprosil AI",
-  description: "Все проекты Yasprosil AI: сайты, лендинги, Telegram-боты, мини-аппы и MVP.",
+  title: "Все работы | Я спросил у ИИ",
+  description: "Все проекты Я спросил у ИИ: сайты, лендинги, Telegram-боты, мини-аппы и MVP.",
 };
 
 export default function ProjectsPage() {

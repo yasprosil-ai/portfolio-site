@@ -50,11 +50,11 @@ function PortraitCard() {
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(34,211,238,0.18),transparent_42%)]" />
       <img
         src="/profile-sergey.webp"
-        alt="Портрет Сергея, автора проекта Yasprosil AI"
+        alt="Портрет Сергея, автора проекта Я спросил у ИИ"
         className="relative aspect-[4/5] w-full object-cover object-top grayscale-[12%] saturate-[0.92]"
       />
       <figcaption className="absolute inset-x-0 bottom-0 border-t border-white/10 bg-[#0B0F17]/82 p-4 backdrop-blur-xl">
-        <p className="text-sm font-semibold text-white">Сергей, Yasprosil AI</p>
+        <p className="text-sm font-semibold text-white">Сергей, Я спросил у ИИ</p>
         <p className="mt-1 text-sm text-slate-300">AI-мейкер: сайты, лендинги, Telegram-боты, мини-аппы и MVP</p>
       </figcaption>
     </figure>

@@ -26,9 +26,9 @@ export default function Header() {
       <nav className="mx-auto flex h-20 w-full max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
         <Link href="/" onClick={closeMenu} className="group flex min-w-0 items-center gap-3">
           <span className="grid size-10 place-items-center rounded-lg border border-cyan-300/40 bg-cyan-300/10 text-sm font-black text-cyan-200 shadow-[0_0_28px_rgba(34,211,238,0.22)]">
-            YA
+            Я
           </span>
-          <span className="text-sm font-semibold tracking-wide text-white sm:text-base">Yasprosil AI</span>
+          <span className="text-sm font-semibold tracking-wide text-white sm:text-base">Я спросил у ИИ</span>
         </Link>
 
         <div className="hidden items-center gap-7 lg:flex">

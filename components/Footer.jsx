@@ -9,14 +9,14 @@ export default function Footer() {
         <div>
           <Link href="/" className="inline-flex items-center gap-3">
             <span className="grid size-10 place-items-center rounded-lg border border-cyan-300/40 bg-cyan-300/10 text-sm font-black text-cyan-200">
-              YA
+              Я
             </span>
-            <span className="font-semibold text-white">Yasprosil AI</span>
+            <span className="font-semibold text-white">Я спросил у ИИ</span>
           </Link>
           <p className="mt-4 max-w-xl text-sm leading-6 text-slate-400">
-            Yasprosil AI: лендинги, Telegram-боты, мини-аппы и MVP на вайбкодинге.
+            Я спросил у ИИ: лендинги, Telegram-боты, мини-аппы и MVP на вайбкодинге.
           </p>
-          <p className="mt-6 text-sm text-slate-500">© 2026 Yasprosil AI. Собрано с AI и вайбкодингом.</p>
+          <p className="mt-6 text-sm text-slate-500">© 2026 Я спросил у ИИ. Собрано с AI и вайбкодингом.</p>
         </div>
 
         <div className="grid gap-5 sm:grid-cols-2 lg:text-right">

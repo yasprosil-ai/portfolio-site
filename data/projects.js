@@ -64,7 +64,7 @@ export const projects = [
   },
   {
     slug: "portfolio-landing",
-    title: "Портфолио Yasprosil AI",
+    title: "Портфолио Я спросил у ИИ",
     category: "Лендинги",
     status: "Реальный проект",
     description:
