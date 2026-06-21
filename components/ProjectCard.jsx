@@ -80,7 +80,7 @@ export default function ProjectCard({ project, primaryHref = "#contact", seconda
                 className="inline-flex min-h-11 items-center justify-center gap-2 rounded-lg border border-white/12 px-4 text-sm font-semibold text-slate-300 transition hover:border-white/28 hover:text-white active:translate-y-px"
               >
                 <FileText size={15} />
-                О проекте
+                Какую проблему решает?
               </button>
             )}
           </div>
