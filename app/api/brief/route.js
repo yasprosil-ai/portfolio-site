@@ -1,8 +1,11 @@
 import { BRIEF_SYSTEM_PROMPT } from "../../../data/brief-prompt.js";
 import { contacts } from "../../../data/skills.js";
 
-// Модель для диалога: быстрая и дешёвая. Можно поменять на claude-sonnet-4-6 при желании.
-const MODEL = "claude-haiku-4-5";
+// Каждый запрос обрабатываем динамически, без кеширования ответов Next.js.
+export const dynamic = "force-dynamic";
+
+// Модель для диалога. Sonnet 4.6 — баланс качества и цены.
+const MODEL = "claude-sonnet-4-6";
 const LEAD_MARKER = "<!--LEAD-->";
 
 export async function POST(request) {
@@ -35,6 +38,7 @@ export async function POST(request) {
   try {
     const res = await fetch("https://api.anthropic.com/v1/messages", {
       method: "POST",
+      cache: "no-store",
       headers: {
         "x-api-key": apiKey,
         "anthropic-version": "2023-06-01",
@@ -42,8 +46,11 @@ export async function POST(request) {
       },
       body: JSON.stringify({
         model: MODEL,
-        max_tokens: 1024,
-        system: BRIEF_SYSTEM_PROMPT,
+        max_tokens: 2048,
+        // Системный промпт кешируем — он одинаковый на каждом ходу диалога.
+        system: [
+          { type: "text", text: BRIEF_SYSTEM_PROMPT, cache_control: { type: "ephemeral" } },
+        ],
         messages: cleaned,
       }),
     });
