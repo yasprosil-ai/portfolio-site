@@ -47,10 +47,7 @@ export async function POST(request) {
       body: JSON.stringify({
         model: MODEL,
         max_tokens: 2048,
-        // Системный промпт кешируем — он одинаковый на каждом ходу диалога.
-        system: [
-          { type: "text", text: BRIEF_SYSTEM_PROMPT, cache_control: { type: "ephemeral" } },
-        ],
+        system: BRIEF_SYSTEM_PROMPT,
         messages: cleaned,
       }),
     });
@@ -78,7 +75,12 @@ export async function POST(request) {
       );
     }
 
-    return Response.json({ reply, lead: isLead, _model: data?.model });
+    return Response.json({
+      reply,
+      lead: isLead,
+      _model: data?.model,
+      _lastUser: cleaned[cleaned.length - 1]?.content,
+    });
   } catch (err) {
     console.error("Brief route error:", err);
     return Response.json(
