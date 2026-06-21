@@ -5,6 +5,7 @@ import ProjectsSection from "../components/ProjectsSection.jsx";
 import ProcessSection from "../components/ProcessSection.jsx";
 import SkillsSection from "../components/SkillsSection.jsx";
 import AboutSection from "../components/AboutSection.jsx";
+import BriefSection from "../components/BriefSection.jsx";
 import ContactSection from "../components/ContactSection.jsx";
 import Footer from "../components/Footer.jsx";
 
@@ -19,6 +20,7 @@ export default function Home() {
         <ProcessSection />
         <SkillsSection />
         <AboutSection />
+        <BriefSection />
         <ContactSection />
       </main>
       <Footer />

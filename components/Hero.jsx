@@ -1,5 +1,4 @@
 import { ArrowDownRight, ArrowUpRight, CheckCircle2, TerminalSquare } from "lucide-react";
-import { contacts } from "../data/skills.js";
 
 export default function Hero() {
   return (
@@ -32,12 +31,10 @@ export default function Hero() {
               <ArrowDownRight size={18} />
             </a>
             <a
-              href={contacts.telegram}
-              target="_blank"
-              rel="noreferrer"
+              href="#brief"
               className="inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-lg border border-white/14 px-6 text-sm font-semibold text-white transition hover:border-white/30 hover:bg-white/6 active:translate-y-px sm:w-auto"
             >
-              Связаться со мной
+              Рассказать о задаче
               <ArrowUpRight size={18} />
             </a>
           </div>

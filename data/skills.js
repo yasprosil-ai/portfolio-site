@@ -22,6 +22,7 @@ export const navItems = [
   { label: "Услуги", href: "#services" },
   { label: "Процесс", href: "#process" },
   { label: "Обо мне", href: "#about" },
+  { label: "Бриф", href: "#brief" },
   { label: "Контакты", href: "#contact" },
 ];
 
