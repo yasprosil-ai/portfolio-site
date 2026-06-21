@@ -22,7 +22,7 @@
 html {
   scroll-behavior: smooth;
   background: #0b0f17;
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 body {
