@@ -13,13 +13,13 @@ export default function ProjectCard({ project, primaryHref = "#contact", seconda
         href={finalPrimaryHref}
         target={primaryExternal ? "_blank" : undefined}
         rel={primaryExternal ? "noreferrer" : undefined}
-        className="relative block min-h-56 overflow-hidden bg-[#0B0F17]"
+        className={`relative block overflow-hidden bg-[#0B0F17] ${project.imageContain ? "aspect-video" : "min-h-56"}`}
         aria-label={`Открыть проект ${project.title}`}
       >
         <img
           src={project.image}
           alt={`Визуальное превью проекта: ${project.title}`}
-          className={`h-full min-h-56 w-full transition duration-700 group-hover:scale-[1.04] ${project.imageContain ? "object-contain" : "object-cover"}`}
+          className={`w-full transition duration-700 group-hover:scale-[1.04] ${project.imageContain ? "h-full object-contain" : "h-full min-h-56 object-cover"}`}
           loading="lazy"
         />
         <div className="absolute left-4 top-4 rounded-lg border border-white/12 bg-black/45 px-3 py-2 text-xs font-semibold text-white backdrop-blur">
