@@ -44,7 +44,7 @@ export default function ProjectCard({ project, primaryHref = "#contact", seconda
                   href={project.youtubeHref}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center gap-1.5 rounded-lg border border-red-500/30 bg-red-500/10 px-3 py-2 text-xs font-semibold text-red-400 transition hover:border-red-500/50 hover:bg-red-500/20 active:translate-y-px"
+                  className="inline-flex items-center gap-1.5 rounded-lg bg-[#FF0000] px-3 py-2 text-xs font-semibold text-white transition hover:bg-[#CC0000] active:translate-y-px"
                 >
                   <Youtube size={13} />
                   Смотреть обзор
