@@ -132,6 +132,7 @@ export const projects = [
       "CSV-бэкап базы заказов после каждой сделки",
     ],
     image: "/tg.bot1.png",
+    imageContain: true,
     primaryLabel: "Обсудить похожий проект",
     secondaryLabel: "Перейти к контактам",
     secondaryHref: "/#contact",
