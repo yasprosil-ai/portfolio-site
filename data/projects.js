@@ -133,9 +133,8 @@ export const projects = [
     ],
     image: "/tg.bot1.png",
     imageContain: true,
-    primaryLabel: "Смотреть обзор на YouTube",
-    primaryHref: "https://www.youtube.com/watch?v=HCxg_jHaeUk",
-    secondaryLabel: "Обсудить похожий проект",
+    youtubeHref: "https://www.youtube.com/watch?v=HCxg_jHaeUk",
+    primaryLabel: "Обсудить похожий проект",
     secondaryHref: "/#contact",
     icon: Calculator,
     details: [

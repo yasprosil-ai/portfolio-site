@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowRight, FileText } from "lucide-react";
+import { ArrowRight, FileText, Youtube } from "lucide-react";
 import { useState } from "react";
 import ProjectDetails from "./ProjectDetails.jsx";
 
@@ -34,10 +34,23 @@ export default function ProjectCard({ project, primaryHref = "#contact", seconda
         </a>
 
         <div className="flex flex-1 flex-col p-5 sm:p-6">
-          <div className="mb-5 flex items-center justify-between gap-4">
-            <span className="rounded-lg border border-cyan-300/20 bg-cyan-300/8 px-3 py-2 text-xs font-semibold uppercase tracking-[0.14em] text-cyan-200">
-              {project.category}
-            </span>
+          <div className="mb-5 flex items-center justify-between gap-3">
+            <div className="flex min-w-0 flex-wrap items-center gap-2">
+              <span className="rounded-lg border border-cyan-300/20 bg-cyan-300/8 px-3 py-2 text-xs font-semibold uppercase tracking-[0.14em] text-cyan-200">
+                {project.category}
+              </span>
+              {project.youtubeHref && (
+                <a
+                  href={project.youtubeHref}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-1.5 rounded-lg border border-red-500/30 bg-red-500/10 px-3 py-2 text-xs font-semibold text-red-400 transition hover:border-red-500/50 hover:bg-red-500/20 active:translate-y-px"
+                >
+                  <Youtube size={13} />
+                  Смотреть обзор
+                </a>
+              )}
+            </div>
             <span className="grid size-10 shrink-0 place-items-center rounded-lg border border-white/10 text-slate-300">
               <Icon size={19} strokeWidth={1.8} />
             </span>
@@ -55,7 +68,7 @@ export default function ProjectCard({ project, primaryHref = "#contact", seconda
             ))}
           </div>
 
-          <div className={`mt-6 grid gap-2 ${project.details ? "grid-cols-3" : "grid-cols-2"}`}>
+          <div className="mt-6 grid grid-cols-2 gap-2">
             <a
               href={finalPrimaryHref}
               target={primaryExternal ? "_blank" : undefined}
@@ -65,15 +78,7 @@ export default function ProjectCard({ project, primaryHref = "#contact", seconda
               {project.primaryLabel}
               <ArrowRight size={13} />
             </a>
-            <a
-              href={finalSecondaryHref}
-              target={secondaryExternal ? "_blank" : undefined}
-              rel={secondaryExternal ? "noreferrer" : undefined}
-              className="inline-flex min-h-10 items-center justify-center rounded-lg border border-white/12 px-2 text-xs font-semibold text-white transition hover:border-white/28 hover:bg-white/6 active:translate-y-px"
-            >
-              {project.secondaryLabel}
-            </a>
-            {project.details && (
+            {project.details ? (
               <button
                 type="button"
                 onClick={() => setShowDetails(true)}
@@ -82,6 +87,15 @@ export default function ProjectCard({ project, primaryHref = "#contact", seconda
                 <FileText size={13} />
                 Какую проблему решает?
               </button>
+            ) : (
+              <a
+                href={finalSecondaryHref}
+                target={secondaryExternal ? "_blank" : undefined}
+                rel={secondaryExternal ? "noreferrer" : undefined}
+                className="inline-flex min-h-10 items-center justify-center rounded-lg border border-white/12 px-2 text-xs font-semibold text-white transition hover:border-white/28 hover:bg-white/6 active:translate-y-px"
+              >
+                {project.secondaryLabel}
+              </a>
             )}
           </div>
         </div>
