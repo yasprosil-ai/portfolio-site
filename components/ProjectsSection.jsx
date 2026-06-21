@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import ProjectCard from "./ProjectCard.jsx";
 import { projectCategories, projects } from "../data/projects.js";
 
@@ -15,12 +15,27 @@ export default function ProjectsSection() {
   const [activeIndex, setActiveIndex] = useState(0);
   const activeGroup = projectsByCategory[activeIndex];
 
+  useEffect(() => {
+    const saved = sessionStorage.getItem("projectsTab");
+    if (saved !== null) {
+      const idx = parseInt(saved, 10);
+      if (idx >= 0 && idx < projectsByCategory.length) setActiveIndex(idx);
+    }
+  }, []);
+
+  const changeTab = (idx) => {
+    setActiveIndex(idx);
+    sessionStorage.setItem("projectsTab", idx);
+  };
+
   const showPrev = () => {
-    setActiveIndex((current) => (current === 0 ? projectsByCategory.length - 1 : current - 1));
+    const next = activeIndex === 0 ? projectsByCategory.length - 1 : activeIndex - 1;
+    changeTab(next);
   };
 
   const showNext = () => {
-    setActiveIndex((current) => (current === projectsByCategory.length - 1 ? 0 : current + 1));
+    const next = activeIndex === projectsByCategory.length - 1 ? 0 : activeIndex + 1;
+    changeTab(next);
   };
 
   return (
@@ -41,7 +56,7 @@ export default function ProjectsSection() {
               <button
                 key={group.category}
                 type="button"
-                onClick={() => setActiveIndex(index)}
+                onClick={() => changeTab(index)}
                 className={`shrink-0 rounded-lg px-4 py-2 text-sm font-semibold transition ${
                   index === activeIndex
                     ? "bg-white text-slate-950"
