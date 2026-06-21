@@ -39,7 +39,7 @@ export default function ProjectCard({ project, primaryHref = "#contact", seconda
               <span className="rounded-lg border border-cyan-300/20 bg-cyan-300/8 px-3 py-2 text-xs font-semibold uppercase tracking-[0.14em] text-cyan-200">
                 {project.category}
               </span>
-              {project.youtubeHref && (
+              {project.youtubeHref ? (
                 <a
                   href={project.youtubeHref}
                   target="_blank"
@@ -49,6 +49,11 @@ export default function ProjectCard({ project, primaryHref = "#contact", seconda
                   <Youtube size={13} />
                   Смотреть обзор
                 </a>
+              ) : (
+                <span className="inline-flex cursor-not-allowed items-center gap-1.5 rounded-lg border border-white/10 px-3 py-2 text-xs font-semibold text-slate-600">
+                  <Youtube size={13} />
+                  Скоро обзор
+                </span>
               )}
             </div>
             <span className="grid size-10 shrink-0 place-items-center rounded-lg border border-white/10 text-slate-300">
