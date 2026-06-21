@@ -78,7 +78,7 @@ export async function POST(request) {
       );
     }
 
-    return Response.json({ reply, lead: isLead });
+    return Response.json({ reply, lead: isLead, _model: data?.model });
   } catch (err) {
     console.error("Brief route error:", err);
     return Response.json(
