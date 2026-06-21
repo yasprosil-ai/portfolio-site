@@ -133,7 +133,7 @@ export const projects = [
     ],
     image: "/tg.bot1.png",
     imageContain: true,
-    primaryLabel: "Смотреть обзор",
+    primaryLabel: "Смотреть обзор на YouTube",
     primaryHref: "https://www.youtube.com/watch?v=HCxg_jHaeUk",
     secondaryLabel: "Обсудить похожий проект",
     secondaryHref: "/#contact",
