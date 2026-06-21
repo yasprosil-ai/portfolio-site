@@ -77,10 +77,10 @@ export default function ProjectCard({ project, primaryHref = "#contact", seconda
               <button
                 type="button"
                 onClick={() => setShowDetails(true)}
-                className="inline-grid size-11 place-items-center rounded-lg border border-white/12 text-slate-400 transition hover:border-white/28 hover:text-white active:translate-y-px"
-                aria-label="Подробнее о проекте"
+                className="inline-flex min-h-11 items-center justify-center gap-2 rounded-lg border border-white/12 px-4 text-sm font-semibold text-slate-300 transition hover:border-white/28 hover:text-white active:translate-y-px"
               >
-                <FileText size={16} />
+                <FileText size={15} />
+                О проекте
               </button>
             )}
           </div>
