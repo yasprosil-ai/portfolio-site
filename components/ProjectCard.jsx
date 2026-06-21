@@ -55,21 +55,21 @@ export default function ProjectCard({ project, primaryHref = "#contact", seconda
             ))}
           </div>
 
-          <div className="mt-6 flex flex-wrap gap-3">
+          <div className={`mt-6 grid gap-2 ${project.details ? "grid-cols-3" : "grid-cols-2"}`}>
             <a
               href={finalPrimaryHref}
               target={primaryExternal ? "_blank" : undefined}
               rel={primaryExternal ? "noreferrer" : undefined}
-              className="inline-flex min-h-11 items-center justify-center gap-2 rounded-lg bg-white px-4 text-sm font-semibold text-slate-950 transition hover:bg-cyan-200 active:translate-y-px"
+              className="inline-flex min-h-10 items-center justify-center gap-1.5 rounded-lg bg-white px-2 text-xs font-semibold text-slate-950 transition hover:bg-cyan-200 active:translate-y-px"
             >
               {project.primaryLabel}
-              <ArrowRight size={17} />
+              <ArrowRight size={13} />
             </a>
             <a
               href={finalSecondaryHref}
               target={secondaryExternal ? "_blank" : undefined}
               rel={secondaryExternal ? "noreferrer" : undefined}
-              className="inline-flex min-h-11 items-center justify-center rounded-lg border border-white/12 px-4 text-sm font-semibold text-white transition hover:border-white/28 hover:bg-white/6 active:translate-y-px"
+              className="inline-flex min-h-10 items-center justify-center rounded-lg border border-white/12 px-2 text-xs font-semibold text-white transition hover:border-white/28 hover:bg-white/6 active:translate-y-px"
             >
               {project.secondaryLabel}
             </a>
@@ -77,9 +77,9 @@ export default function ProjectCard({ project, primaryHref = "#contact", seconda
               <button
                 type="button"
                 onClick={() => setShowDetails(true)}
-                className="inline-flex min-h-11 items-center justify-center gap-2 rounded-lg border border-white/12 px-4 text-sm font-semibold text-slate-300 transition hover:border-white/28 hover:text-white active:translate-y-px"
+                className="inline-flex min-h-10 items-center justify-center gap-1.5 rounded-lg border border-white/12 px-2 text-xs font-semibold text-slate-300 transition hover:border-white/28 hover:text-white active:translate-y-px"
               >
-                <FileText size={15} />
+                <FileText size={13} />
                 Какую проблему решает?
               </button>
             )}
