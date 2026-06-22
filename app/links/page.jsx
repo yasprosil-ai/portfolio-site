@@ -110,7 +110,7 @@ export default function LinksPage() {
 
         {/* Brand header */}
         <div className="mb-10 flex flex-col items-center text-center">
-          <div className="avatar-breathe mb-5 overflow-hidden rounded-full border-2 border-cyan-300/50">
+          <div className="avatar-breathe mb-5 overflow-hidden rounded-2xl border border-cyan-300/40">
             <Image
               src="/avatar.png"
               alt="Я спросил у ИИ"
