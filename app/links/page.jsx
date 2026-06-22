@@ -110,8 +110,7 @@ export default function LinksPage() {
         {/* Brand header */}
         <div className="mb-10 flex flex-col items-center text-center">
           <div
-            style={{ "--reveal-delay": "0ms" }}
-            className="avatar-breathe reveal-card mb-5 grid size-[4.25rem] place-items-center rounded-2xl border border-cyan-300/40 bg-cyan-300/10 text-2xl font-black text-cyan-200"
+            className="avatar-breathe mb-5 grid size-[4.25rem] place-items-center rounded-2xl border border-cyan-300/40 bg-cyan-300/10 text-2xl font-black text-cyan-200"
           >
             Я
           </div>
