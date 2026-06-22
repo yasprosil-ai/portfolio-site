@@ -126,13 +126,6 @@ export default function LinksPage() {
           >
             Я спросил у ИИ
           </h1>
-          <p
-            style={{ "--reveal-delay": "130ms" }}
-            className="reveal-card mt-4 inline-flex items-center gap-2 rounded-lg border border-amber-300/30 bg-amber-300/10 px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.15em] text-amber-100"
-          >
-            <span className="dot-pulse size-1.5 rounded-full bg-amber-300" />
-            Все ссылки
-          </p>
         </div>
 
         {/* About block */}
@@ -169,6 +162,15 @@ export default function LinksPage() {
             ))}
           </div>
         </div>
+
+        {/* Links header */}
+        <p
+          style={{ "--reveal-delay": "220ms" }}
+          className="reveal-card mb-4 inline-flex items-center gap-2 rounded-lg border border-amber-300/30 bg-amber-300/10 px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.15em] text-amber-100"
+        >
+          <span className="dot-pulse size-1.5 rounded-full bg-amber-300" />
+          Все ссылки
+        </p>
 
         {/* Link list */}
         <div className="w-full space-y-2.5">
