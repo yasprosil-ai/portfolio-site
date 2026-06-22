@@ -46,9 +46,13 @@ export default function Hero() {
 
           <div className="mt-8 flex max-w-full flex-wrap gap-2 text-sm text-slate-300">
             {["Сайты", "Лендинги", "Сайт-визитки", "Telegram-боты", "Мини-аппы", "MVP"].map((item) => (
-              <span key={item} className="rounded-lg border border-white/10 bg-white/[0.03] px-3 py-2">
+              <a
+                key={item}
+                href={`/?tab=${encodeURIComponent(item)}#projects`}
+                className="rounded-lg border border-white/10 bg-white/[0.03] px-3 py-2 transition hover:border-white/22 hover:bg-white/[0.07] hover:text-white active:scale-95"
+              >
                 {item}
-              </span>
+              </a>
             ))}
           </div>
         </div>

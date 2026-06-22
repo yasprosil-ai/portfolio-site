@@ -147,7 +147,7 @@ export default function LinksPage() {
             {[
               { label: "Сайты",          href: "/?tab=Сайты#projects"          },
               { label: "Лендинги",       href: "/?tab=Лендинги#projects"       },
-              { label: "Сайт-визитки",   href: "/?tab=Сайты#projects"          },
+              { label: "Сайт-визитки",   href: "/?tab=Сайт-визитки#projects"   },
               { label: "Telegram-боты",  href: "/?tab=Telegram-боты#projects"  },
               { label: "Мини-аппы",      href: "/?tab=Мини-аппы#projects"      },
               { label: "MVP",            href: "/?tab=MVP#projects"             },
