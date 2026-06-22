@@ -58,7 +58,7 @@ const linkItems = [
     href: contacts.rutube,
     Icon: RutubeIcon,
     label: "Rutube",
-    desc: "Видеоролики на Rutube",
+    desc: "Демонстрация готовых инструментов",
     iconCls: "text-blue-400 bg-blue-400/10 border-blue-400/25",
   },
   {
