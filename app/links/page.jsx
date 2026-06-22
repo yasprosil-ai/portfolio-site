@@ -151,10 +151,21 @@ export default function LinksPage() {
             Быстро собираю рабочие цифровые продукты от идеи до первой понятной версии
           </p>
           <div className="mt-4 flex flex-wrap gap-1.5">
-            {["Сайты", "Лендинги", "Сайт-визитки", "Telegram-боты", "Мини-аппы", "MVP"].map((tag) => (
-              <span key={tag} className="rounded-lg border border-white/10 bg-white/[0.04] px-2.5 py-1 text-xs text-slate-300">
-                {tag}
-              </span>
+            {[
+              { label: "Сайты",          href: "/?tab=Сайты#projects"          },
+              { label: "Лендинги",       href: "/?tab=Лендинги#projects"       },
+              { label: "Сайт-визитки",   href: "/#services"                    },
+              { label: "Telegram-боты",  href: "/?tab=Telegram-боты#projects"  },
+              { label: "Мини-аппы",      href: "/?tab=Мини-аппы#projects"      },
+              { label: "MVP",            href: "/?tab=MVP#projects"             },
+            ].map(({ label, href }) => (
+              <a
+                key={label}
+                href={href}
+                className="rounded-lg border border-white/10 bg-white/[0.04] px-2.5 py-1 text-xs text-slate-300 transition hover:border-white/22 hover:bg-white/[0.08] hover:text-white active:scale-95"
+              >
+                {label}
+              </a>
             ))}
           </div>
         </div>

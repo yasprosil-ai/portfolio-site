@@ -16,6 +16,12 @@ export default function ProjectsSection() {
   const activeGroup = projectsByCategory[activeIndex];
 
   useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const tabParam = params.get("tab");
+    if (tabParam) {
+      const idx = projectsByCategory.findIndex((g) => g.category === tabParam);
+      if (idx >= 0) { setActiveIndex(idx); return; }
+    }
     const saved = sessionStorage.getItem("projectsTab");
     if (saved !== null) {
       const idx = parseInt(saved, 10);
