@@ -135,6 +135,30 @@ export default function LinksPage() {
           </p>
         </div>
 
+        {/* About block */}
+        <div
+          style={{ "--reveal-delay": "200ms" }}
+          className="reveal-card mb-8 w-full rounded-xl border border-white/10 bg-white/[0.025] px-5 py-5"
+        >
+          <h2 className="text-xl font-bold leading-tight text-white">
+            Цифровые{" "}
+            <span className="bg-gradient-to-r from-amber-300 via-amber-200 to-indigo-400 bg-clip-text text-transparent">
+              инструменты
+            </span>
+            {" "}для вашего бизнеса
+          </h2>
+          <p className="mt-2.5 text-sm leading-relaxed text-slate-400">
+            Быстро собираю рабочие цифровые продукты от идеи до первой понятной версии
+          </p>
+          <div className="mt-4 flex flex-wrap gap-1.5">
+            {["Сайты", "Лендинги", "Сайт-визитки", "Telegram-боты", "Мини-аппы", "MVP"].map((tag) => (
+              <span key={tag} className="rounded-lg border border-white/10 bg-white/[0.04] px-2.5 py-1 text-xs text-slate-300">
+                {tag}
+              </span>
+            ))}
+          </div>
+        </div>
+
         {/* Link list */}
         <div className="w-full space-y-2.5">
           {linkItems.map((item, i) => (
