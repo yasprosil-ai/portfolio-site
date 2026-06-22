@@ -44,7 +44,7 @@ const linkItems = [
     href: contacts.youtube,
     Icon: FaYoutube,
     label: "YouTube",
-    desc: "Видео про ИИ-разработку",
+    desc: "Демонстрация готовых инструментов",
     iconCls: "text-rose-400 bg-rose-400/10 border-rose-400/25",
   },
   {
