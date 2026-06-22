@@ -13,13 +13,18 @@ export default function Hero() {
         <div className="min-w-0 max-w-full lg:max-w-4xl">
           <p className="mb-6 inline-flex items-center gap-2 rounded-lg border border-amber-300/30 bg-amber-300/10 px-3 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-amber-100 shadow-[0_0_30px_rgba(245,158,11,0.16)]">
             <span className="size-2 rounded-full bg-amber-300 shadow-[0_0_18px_rgba(251,191,36,0.9)]" />
-            Портфолио AI-мейкера
+            Я спросил у ИИ
           </p>
-          <h1 className="w-full max-w-full break-words text-[2rem] font-semibold leading-[1.08] tracking-normal text-white sm:text-5xl lg:max-w-[48rem] lg:text-[3.65rem]">
-            Создаю сайты, лендинги, Telegram-ботов и мини-аппы с помощью ИИ
+          <h1 className="w-full max-w-full break-words text-[2rem] font-bold leading-[1.08] tracking-tight text-white sm:text-5xl lg:max-w-[48rem] lg:text-[3.65rem]">
+            Цифровые{" "}
+            <span className="bg-gradient-to-r from-amber-300 via-amber-200 to-indigo-500 bg-clip-text text-transparent">
+              инструменты
+            </span>
+            <br />
+            для вашего бизнеса
           </h1>
-          <p className="mt-6 max-w-2xl text-base leading-8 text-slate-300 sm:text-lg">
-            Быстро собираю рабочие MVP и цифровые продукты от идеи до первой понятной версии.
+          <p className="mt-6 max-w-2xl text-xs font-semibold uppercase tracking-[0.16em] text-slate-400 sm:text-sm">
+            Быстро собираю рабочие цифровые продукты от идеи до первой понятной версии
           </p>
 
           <div className="mt-9 flex flex-col gap-3 sm:flex-row">
@@ -40,7 +45,7 @@ export default function Hero() {
           </div>
 
           <div className="mt-8 flex max-w-full flex-wrap gap-2 text-sm text-slate-300">
-            {["Сайты", "Лендинги", "Telegram-боты", "Мини-аппы", "MVP"].map((item) => (
+            {["Сайты", "Лендинги", "Сайт-визитки", "Telegram-боты", "Мини-аппы", "MVP"].map((item) => (
               <span key={item} className="rounded-lg border border-white/10 bg-white/[0.03] px-3 py-2">
                 {item}
               </span>
