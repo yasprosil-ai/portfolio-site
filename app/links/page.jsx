@@ -36,7 +36,7 @@ const linkItems = [
     href: "/",
     Icon: Globe,
     label: "Портфолио",
-    desc: "Лендинги, боты, MVP",
+    desc: "Сайты, Лендинги, Telegram-боты и т.д.",
     iconCls: "text-emerald-300 bg-emerald-300/10 border-emerald-300/25",
     isInternal: true,
   },
