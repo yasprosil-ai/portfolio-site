@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Mail, Globe, ArrowUpRight } from "lucide-react";
 import { FaTelegram, FaYoutube, FaTiktok, FaInstagram } from "react-icons/fa6";
 import { contacts } from "../../data/skills.js";
@@ -109,10 +110,15 @@ export default function LinksPage() {
 
         {/* Brand header */}
         <div className="mb-10 flex flex-col items-center text-center">
-          <div
-            className="avatar-breathe mb-5 grid size-[4.25rem] place-items-center rounded-2xl border border-cyan-300/40 bg-cyan-300/10 text-2xl font-black text-cyan-200"
-          >
-            Я
+          <div className="avatar-breathe mb-5 overflow-hidden rounded-full border-2 border-cyan-300/50">
+            <Image
+              src="/avatar.png"
+              alt="Я спросил у ИИ"
+              width={72}
+              height={72}
+              className="size-[4.5rem] object-cover"
+              priority
+            />
           </div>
           <h1
             style={{ "--reveal-delay": "80ms" }}
