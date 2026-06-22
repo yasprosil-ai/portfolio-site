@@ -44,7 +44,7 @@ const linkItems = [
     href: contacts.youtube,
     Icon: FaYoutube,
     label: "YouTube",
-    desc: "Демонстрация готовых инструментов",
+    desc: "Обзоры проектов",
     iconCls: "text-rose-400 bg-rose-400/10 border-rose-400/25",
   },
   {
@@ -58,7 +58,7 @@ const linkItems = [
     href: contacts.rutube,
     Icon: RutubeIcon,
     label: "Rutube",
-    desc: "Демонстрация готовых инструментов",
+    desc: "Обзоры проектов",
     iconCls: "text-blue-400 bg-blue-400/10 border-blue-400/25",
   },
   {
