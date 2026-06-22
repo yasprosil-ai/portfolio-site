@@ -131,7 +131,7 @@ export default function LinksPage() {
         {/* About block */}
         <div
           style={{ "--reveal-delay": "200ms" }}
-          className="reveal-card mb-8 w-full rounded-xl border border-white/10 bg-white/[0.025] px-5 py-5"
+          className="reveal-card mb-8 w-full"
         >
           <h2 className="text-xl font-bold leading-tight text-white">
             Цифровые{" "}
