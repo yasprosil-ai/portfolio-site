@@ -51,7 +51,7 @@ export default function Footer() {
             <span className="font-semibold text-white">Я спросил у ИИ</span>
           </Link>
           <p className="mt-4 max-w-xl text-sm leading-6 text-slate-400">
-            Лендинги, Telegram-боты, мини-аппы и MVP на вайбкодинге.
+            Лендинги, Telegram-боты, мини-аппы и MVP с помощью ИИ.
           </p>
 
           <div className="mt-5 flex flex-wrap items-center gap-2">
@@ -69,7 +69,7 @@ export default function Footer() {
           </div>
 
           <p className="mt-6 text-sm text-slate-500">
-            © {new Date().getFullYear()} Я спросил у ИИ. Собрано с AI и вайбкодингом.
+            © {new Date().getFullYear()} Я спросил у ИИ. Создано с ИИ.
           </p>
         </div>
 

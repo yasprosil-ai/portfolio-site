@@ -16,7 +16,7 @@ export default function Hero() {
             Портфолио AI-мейкера
           </p>
           <h1 className="w-full max-w-full break-words text-[2rem] font-semibold leading-[1.08] tracking-normal text-white sm:text-5xl lg:max-w-[48rem] lg:text-[3.65rem]">
-            Создаю сайты, лендинги, Telegram-ботов и мини-аппы с помощью AI и вайбкодинга
+            Создаю сайты, лендинги, Telegram-ботов и мини-аппы с помощью ИИ
           </h1>
           <p className="mt-6 max-w-2xl text-base leading-8 text-slate-300 sm:text-lg">
             Быстро собираю рабочие MVP и цифровые продукты от идеи до первой понятной версии.

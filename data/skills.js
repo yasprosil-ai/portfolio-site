@@ -46,7 +46,7 @@ export const processSteps = [
   {
     title: "Прототип",
     icon: BrainCircuit,
-    text: "Собираю первую рабочую версию с помощью AI-инструментов и вайбкодинга, чтобы быстро перейти к проверке.",
+    text: "Собираю первую рабочую версию с помощью ИИ-инструментов, чтобы быстро перейти к проверке.",
   },
   {
     title: "Запуск",
@@ -67,7 +67,7 @@ export const skillGroups = [
     items: ["Telegram Bot API", "aiogram", "сценарии и FSM", "приём оплат", "подтверждение платежей", "вебхуки"],
   },
   {
-    title: "AI / вайбкодинг",
+    title: "AI-инструменты",
     icon: BrainCircuit,
     items: ["Claude / Anthropic API", "распознавание по фото", "проектирование промптов", "ChatGPT", "Codex", "Cursor"],
   },
