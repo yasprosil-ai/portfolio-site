@@ -65,7 +65,7 @@ const linkItems = [
     href: contacts.instagram,
     Icon: FaInstagram,
     label: "Instagram",
-    desc: "Посты и сторис",
+    desc: "Процесс создания изнутри",
     iconCls: "text-pink-400 bg-pink-400/10 border-pink-400/25",
   },
   {
