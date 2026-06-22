@@ -29,7 +29,7 @@ const linkItems = [
     href: contacts.telegramChannel,
     Icon: FaTelegram,
     label: "Telegram канал",
-    desc: "Кейсы, обновления, проекты",
+    desc: "От заказа до готового кейса",
     iconCls: "text-sky-300 bg-sky-300/10 border-sky-300/25",
   },
   {
