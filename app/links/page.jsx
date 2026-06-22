@@ -143,7 +143,7 @@ export default function LinksPage() {
           <p className="mt-2.5 text-sm leading-relaxed text-slate-400">
             Быстро собираю рабочие цифровые продукты от идеи до первой понятной версии
           </p>
-          <div className="mt-4 flex flex-wrap gap-1.5">
+          <div className="mt-4 flex flex-wrap justify-center gap-1.5">
             {[
               { label: "Сайты",          href: "/?tab=Сайты#projects"          },
               { label: "Лендинги",       href: "/?tab=Лендинги#projects"       },
