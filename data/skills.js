@@ -14,7 +14,13 @@ import {
 
 export const contacts = {
   telegram: "https://t.me/yasprosil_ii",
+  telegramChannel: "https://t.me/+AMoqLeCvu2IwMmQy",
   email: "yasprosil.ai@gmail.com",
+  youtube: "https://www.youtube.com/@yasprosil_ai",
+  tiktok: "https://www.tiktok.com/@yasprosil_ai",
+  rutube: "https://rutube.ru/channel/78433399/",
+  instagram: "https://www.instagram.com/yasprosil.ai/",
+  github: "https://github.com/GPT-Pomogi",
 };
 
 export const navItems = [

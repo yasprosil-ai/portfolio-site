@@ -1,6 +1,36 @@
+"use client";
+
 import Link from "next/link";
-import { Mail, Send } from "lucide-react";
+import { Mail, ArrowUp } from "lucide-react";
+import { FaTelegram, FaYoutube, FaTiktok, FaInstagram, FaGithub } from "react-icons/fa6";
+import { SiRutube } from "react-icons/si";
 import { contacts, navItems } from "../data/skills.js";
+
+const socials = [
+  { href: contacts.telegram,        Icon: FaTelegram,  title: "Telegram личка"   },
+  { href: contacts.telegramChannel, Icon: FaTelegram,  title: "Telegram канал"   },
+  { href: contacts.youtube,         Icon: FaYoutube,   title: "YouTube"          },
+  { href: contacts.tiktok,          Icon: FaTiktok,    title: "TikTok"           },
+  { href: contacts.rutube,          Icon: SiRutube,    title: "Rutube"           },
+  { href: contacts.instagram,       Icon: FaInstagram, title: "Instagram"        },
+  { href: contacts.github,          Icon: FaGithub,    title: "GitHub"           },
+  { href: `mailto:${contacts.email}`, Icon: Mail,      title: "Email"            },
+];
+
+function IconBtn({ href, Icon, title }) {
+  return (
+    <a
+      href={href}
+      target={href.startsWith("mailto") ? undefined : "_blank"}
+      rel="noreferrer"
+      title={title}
+      aria-label={title}
+      className="grid size-10 place-items-center rounded-xl border border-white/10 bg-white/[0.03] text-slate-400 transition hover:border-white/20 hover:bg-white/8 hover:text-white active:scale-95"
+    >
+      <Icon size={17} />
+    </a>
+  );
+}
 
 export default function Footer() {
   return (
@@ -14,9 +44,26 @@ export default function Footer() {
             <span className="font-semibold text-white">Я спросил у ИИ</span>
           </Link>
           <p className="mt-4 max-w-xl text-sm leading-6 text-slate-400">
-            Я спросил у ИИ: лендинги, Telegram-боты, мини-аппы и MVP на вайбкодинге.
+            Лендинги, Telegram-боты, мини-аппы и MVP на вайбкодинге.
           </p>
-          <p className="mt-6 text-sm text-slate-500">© 2026 Я спросил у ИИ. Собрано с AI и вайбкодингом.</p>
+
+          <div className="mt-5 flex flex-wrap items-center gap-2">
+            {socials.map(({ href, Icon, title }) => (
+              <IconBtn key={title} href={href} Icon={Icon} title={title} />
+            ))}
+            <button
+              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+              title="Наверх"
+              aria-label="Наверх"
+              className="grid size-10 place-items-center rounded-xl border border-white/10 bg-white/[0.03] text-slate-400 transition hover:border-white/20 hover:bg-white/8 hover:text-white active:scale-95"
+            >
+              <ArrowUp size={17} />
+            </button>
+          </div>
+
+          <p className="mt-6 text-sm text-slate-500">
+            © {new Date().getFullYear()} Я спросил у ИИ. Собрано с AI и вайбкодингом.
+          </p>
         </div>
 
         <div className="grid gap-5 sm:grid-cols-2 lg:text-right">
@@ -24,7 +71,11 @@ export default function Footer() {
             <p className="mb-3 text-sm font-semibold text-white">Навигация</p>
             <div className="grid gap-2">
               {navItems.map((item) => (
-                <Link key={item.href} href={`/${item.href}`} className="text-sm text-slate-400 transition hover:text-white">
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className="text-sm text-slate-400 transition hover:text-white"
+                >
                   {item.label}
                 </Link>
               ))}
@@ -37,16 +88,14 @@ export default function Footer() {
                 href={contacts.telegram}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center gap-2 text-sm text-slate-400 transition hover:text-white lg:justify-end"
+                className="text-sm text-slate-400 transition hover:text-white lg:text-right"
               >
-                <Send size={15} />
                 Telegram
               </a>
               <a
                 href={`mailto:${contacts.email}`}
-                className="inline-flex items-center gap-2 text-sm text-slate-400 transition hover:text-white lg:justify-end"
+                className="text-sm text-slate-400 transition hover:text-white lg:text-right"
               >
-                <Mail size={15} />
                 Email
               </a>
             </div>
