@@ -110,7 +110,7 @@ export default function LinksPage() {
       <main className="mx-auto flex min-h-dvh max-w-sm flex-col items-center justify-center px-5 py-16">
 
         {/* Brand header */}
-        <Link href="/" className="mb-10 flex flex-col items-center text-center transition hover:opacity-80 active:scale-95">
+        <Link href="/" className="mb-10 flex w-full flex-col items-center text-center transition hover:opacity-80 active:scale-95">
           <div className="avatar-breathe mb-5 overflow-hidden rounded-2xl border border-cyan-300/40">
             <Image
               src="/avatar.png"
