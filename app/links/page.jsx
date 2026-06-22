@@ -51,7 +51,7 @@ const linkItems = [
     href: contacts.tiktok,
     Icon: FaTiktok,
     label: "TikTok",
-    desc: "Короткие видео",
+    desc: "Процесс создания изнутри",
     iconCls: "text-slate-200 bg-white/8 border-white/15",
   },
   {
