@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import { Mail, Globe, ArrowUpRight } from "lucide-react";
 import { FaTelegram, FaYoutube, FaTiktok, FaInstagram } from "react-icons/fa6";
 import { contacts } from "../../data/skills.js";
@@ -110,7 +109,7 @@ export default function LinksPage() {
       <main className="mx-auto flex min-h-dvh max-w-sm flex-col items-center justify-center px-5 py-16">
 
         {/* Brand header */}
-        <Link href="/" className="mb-10 flex w-full flex-col items-center text-center transition hover:opacity-80 active:scale-95">
+        <div className="mb-10 flex flex-col items-center text-center">
           <div className="avatar-breathe mb-5 overflow-hidden rounded-2xl border border-cyan-300/40">
             <Image
               src="/avatar.png"
@@ -127,7 +126,7 @@ export default function LinksPage() {
           >
             Я спросил у ИИ
           </h1>
-        </Link>
+        </div>
 
         {/* About block */}
         <div
