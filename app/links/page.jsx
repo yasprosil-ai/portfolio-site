@@ -128,12 +128,6 @@ export default function LinksPage() {
           </h1>
           <p
             style={{ "--reveal-delay": "130ms" }}
-            className="reveal-card mt-1.5 text-sm leading-relaxed text-slate-400"
-          >
-            Сайты, боты и MVP с помощью ИИ
-          </p>
-          <p
-            style={{ "--reveal-delay": "180ms" }}
             className="reveal-card mt-4 inline-flex items-center gap-2 rounded-lg border border-amber-300/30 bg-amber-300/10 px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.15em] text-amber-100"
           >
             <span className="dot-pulse size-1.5 rounded-full bg-amber-300" />
