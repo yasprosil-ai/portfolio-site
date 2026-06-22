@@ -26,13 +26,6 @@ const linkItems = [
     iconCls: "text-cyan-300 bg-cyan-300/10 border-cyan-300/25",
   },
   {
-    href: contacts.telegramChannel,
-    Icon: FaTelegram,
-    label: "Telegram канал",
-    desc: "От заказа до готового кейса",
-    iconCls: "text-sky-300 bg-sky-300/10 border-sky-300/25",
-  },
-  {
     href: "/",
     Icon: Globe,
     label: "Портфолио",
@@ -60,6 +53,13 @@ const linkItems = [
     label: "Instagram",
     desc: "Процесс создания изнутри",
     iconCls: "text-pink-400 bg-pink-400/10 border-pink-400/25",
+  },
+  {
+    href: contacts.telegramChannel,
+    Icon: FaTelegram,
+    label: "Telegram канал",
+    desc: "От заказа до готового кейса",
+    iconCls: "text-sky-300 bg-sky-300/10 border-sky-300/25",
   },
   {
     href: contacts.rutube,
