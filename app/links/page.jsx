@@ -55,18 +55,18 @@ const linkItems = [
     iconCls: "text-slate-200 bg-white/8 border-white/15",
   },
   {
-    href: contacts.rutube,
-    Icon: RutubeIcon,
-    label: "Rutube",
-    desc: "Обзоры проектов",
-    iconCls: "text-blue-400 bg-blue-400/10 border-blue-400/25",
-  },
-  {
     href: contacts.instagram,
     Icon: FaInstagram,
     label: "Instagram",
     desc: "Процесс создания изнутри",
     iconCls: "text-pink-400 bg-pink-400/10 border-pink-400/25",
+  },
+  {
+    href: contacts.rutube,
+    Icon: RutubeIcon,
+    label: "Rutube",
+    desc: "Обзоры проектов",
+    iconCls: "text-blue-400 bg-blue-400/10 border-blue-400/25",
   },
   {
     href: `mailto:${contacts.email}`,
