@@ -3,7 +3,14 @@
 import Link from "next/link";
 import { Mail, ArrowUp } from "lucide-react";
 import { FaTelegram, FaYoutube, FaTiktok, FaInstagram, FaGithub } from "react-icons/fa6";
-import { SiRutube } from "react-icons/si";
+
+function RutubeIcon({ size = 17 }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor">
+      <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm-1.5 14V8l6 4-6 4z" />
+    </svg>
+  );
+}
 import { contacts, navItems } from "../data/skills.js";
 
 const socials = [
@@ -11,7 +18,7 @@ const socials = [
   { href: contacts.telegramChannel, Icon: FaTelegram,  title: "Telegram канал"   },
   { href: contacts.youtube,         Icon: FaYoutube,   title: "YouTube"          },
   { href: contacts.tiktok,          Icon: FaTiktok,    title: "TikTok"           },
-  { href: contacts.rutube,          Icon: SiRutube,    title: "Rutube"           },
+  { href: contacts.rutube,          Icon: RutubeIcon,  title: "Rutube"           },
   { href: contacts.instagram,       Icon: FaInstagram, title: "Instagram"        },
   { href: contacts.github,          Icon: FaGithub,    title: "GitHub"           },
   { href: `mailto:${contacts.email}`, Icon: Mail,      title: "Email"            },
