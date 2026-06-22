@@ -116,7 +116,7 @@ export default function LinksPage() {
               alt="Я спросил у ИИ"
               width={72}
               height={72}
-              className="size-[4.5rem] object-cover object-top"
+              className="size-[4.5rem] object-cover object-[center_25%]"
               priority
             />
           </div>
