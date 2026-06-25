@@ -11,6 +11,7 @@ const featuredCategoryOrder = {
     "remkvartira-landing",
     "dental-implant-landing",
     "legal-services-landing",
+    "portfolio-landing",
   ],
 };
 
