@@ -28,9 +28,6 @@ export default function ProjectCard({ project, primaryHref = "#contact", seconda
             className={`h-full w-full transition duration-700 group-hover:scale-[1.04] ${project.imageContain ? "object-contain" : "object-cover"}`}
             loading="lazy"
           />
-          <div className="absolute left-4 top-4 rounded-lg border border-white/12 bg-black/45 px-3 py-2 text-xs font-semibold text-white backdrop-blur">
-            {project.status}
-          </div>
         </a>
 
         <div className="flex flex-1 flex-col p-5 sm:p-6">
