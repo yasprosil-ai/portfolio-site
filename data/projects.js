@@ -284,7 +284,7 @@ export const projects = [
     description:
       "Этот промо-сайт: адаптивный одностраничник в тёмном технологичном стиле с витриной проектов и контактными CTA.",
     features: ["первый экран с оффером", "витрина проектов", "адаптив под телефон", "контактные CTA"],
-    image: "/visuals/portfolio.svg",
+    image: "/visuals/yasprosil-ai.png",
     primaryLabel: "Открыть сайт",
     primaryHref: "https://yasprosil-ai.vercel.app",
     secondaryHref: "/#contact",
