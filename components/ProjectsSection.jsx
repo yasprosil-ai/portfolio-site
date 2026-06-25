@@ -144,13 +144,30 @@ export default function ProjectsSection() {
             </p>
           </div>
 
-          <div className="grid gap-5 xl:grid-cols-3">
-            {activeGroup.items.slice(0, 3).map((project, i) => (
-              <div key={project.slug} className={i > 0 ? "hidden sm:block" : ""}>
-                <ProjectCard project={project} primaryHref="#contact" secondaryHref="/projects" />
-              </div>
-            ))}
-          </div>
+          {activeGroup.items.length === 0 ? (
+            <div className="flex flex-col items-center justify-center gap-5 py-16 text-center">
+              <span className="rounded-lg border border-amber-300/30 bg-amber-300/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-amber-100">
+                В разработке
+              </span>
+              <p className="max-w-xs text-sm leading-6 text-slate-400">
+                Работы в этой категории появятся скоро. Если уже есть задача — напиши, обсудим.
+              </p>
+              <a
+                href="#contact"
+                className="inline-flex min-h-11 items-center gap-2 rounded-lg border border-white/12 px-5 text-sm font-semibold text-white transition hover:border-white/28 hover:bg-white/6 active:translate-y-px"
+              >
+                Обсудить задачу
+              </a>
+            </div>
+          ) : (
+            <div className="grid gap-5 xl:grid-cols-3">
+              {activeGroup.items.slice(0, 3).map((project, i) => (
+                <div key={project.slug} className={i > 0 ? "hidden sm:block" : ""}>
+                  <ProjectCard project={project} primaryHref="#contact" secondaryHref="/projects" />
+                </div>
+              ))}
+            </div>
+          )}
         </div>
 
         {/* Кнопка "Все работы" — только на мобилке, под карточкой */}
