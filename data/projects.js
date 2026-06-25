@@ -243,7 +243,7 @@ export const projects = [
     description:
       "Медицинский лендинг по имплантации зубов: спокойный оффер без давления, блоки про врачей, этапы лечения, пакеты с ценами, FAQ и форма записи.",
     features: ["3D-планирование", "врачи и этапы", "пакеты с ценами", "FAQ и запись"],
-    image: "/visuals/portfolio.svg",
+    image: "/visuals/stomatologiya.png",
     primaryLabel: "Открыть сайт",
     primaryHref: "https://stomatologiya-implant.vercel.app/",
     secondaryHref: "/#contact",
