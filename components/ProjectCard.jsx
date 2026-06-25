@@ -14,7 +14,7 @@ export default function ProjectCard({ project, primaryHref = "#contact", seconda
 
   return (
     <>
-      <article className="liquid-panel group flex h-full flex-col rounded-[1.5rem] transition duration-300 hover:-translate-y-1 hover:border-cyan-300/22 hover:bg-[#121d2d]">
+      <article className="liquid-panel group flex h-full flex-col rounded-[1.5rem] transition duration-300 hover:-translate-y-1 hover:border-cyan-300/30 hover:bg-[#121d2d]">
         <a
           href={finalPrimaryHref}
           target={primaryExternal ? "_blank" : undefined}
@@ -78,7 +78,7 @@ export default function ProjectCard({ project, primaryHref = "#contact", seconda
               href={finalPrimaryHref}
               target={primaryExternal ? "_blank" : undefined}
               rel={primaryExternal ? "noreferrer" : undefined}
-              className="liquid-button inline-flex min-h-11 w-full items-center justify-center gap-2 rounded-[1rem] text-sm font-semibold text-slate-950 transition hover:brightness-105 active:translate-y-px"
+              className="liquid-button inline-flex min-h-11 w-full items-center justify-center gap-2 rounded-[1rem] text-sm font-semibold text-slate-950 transition hover:brightness-110 active:translate-y-px"
             >
               {project.primaryLabel}
               <ArrowRight size={15} />

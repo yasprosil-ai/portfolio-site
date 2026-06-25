@@ -22,10 +22,10 @@ export default function Header() {
   const resolveHref = (href) => (isHome ? href : `/${href}`);
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 border-b border-white/8 bg-[#08101f]/56 backdrop-blur-xl">
+    <header className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-[#08101f]/62 backdrop-blur-2xl">
       <nav className="mx-auto flex h-20 w-full max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
         <Link href="/" onClick={closeMenu} className="group flex h-full min-w-0 items-center gap-3">
-          <span className="liquid-chip grid size-10 place-items-center rounded-[1rem] text-sm font-black text-cyan-100 shadow-[0_0_18px_rgba(88,236,255,0.12)]">
+          <span className="liquid-chip grid size-10 place-items-center rounded-[1rem] text-sm font-black text-cyan-100 shadow-[0_0_30px_rgba(88,236,255,0.2)]">
             Я
           </span>
           <span className="text-sm font-semibold tracking-wide text-white sm:text-base">Я спросил у ИИ</span>
@@ -44,7 +44,7 @@ export default function Header() {
             href={contacts.telegram}
             target="_blank"
             rel="noreferrer"
-            className="liquid-button inline-flex min-h-11 items-center justify-center rounded-[1rem] px-5 text-sm font-semibold text-slate-950 transition hover:brightness-105 active:translate-y-px"
+            className="liquid-button inline-flex min-h-11 items-center justify-center rounded-[1rem] px-5 text-sm font-semibold text-slate-950 transition hover:brightness-110 active:translate-y-px"
           >
             Обсудить проект
           </a>
@@ -62,7 +62,7 @@ export default function Header() {
       </nav>
 
       {isOpen ? (
-        <div className="border-t border-white/8 bg-[#091121]/88 px-4 pb-5 pt-2 backdrop-blur-xl lg:hidden">
+        <div className="border-t border-white/10 bg-[#091121]/92 px-4 pb-5 pt-2 backdrop-blur-2xl lg:hidden">
           <div className="mx-auto grid max-w-7xl gap-1">
             {navItems.map((item) => (
               <Link
@@ -79,7 +79,7 @@ export default function Header() {
               target="_blank"
               rel="noreferrer"
               onClick={closeMenu}
-              className="liquid-button mt-3 inline-flex min-h-12 items-center justify-center rounded-[1rem] px-5 text-sm font-semibold text-slate-950 transition hover:brightness-105 active:translate-y-px"
+              className="liquid-button mt-3 inline-flex min-h-12 items-center justify-center rounded-[1rem] px-5 text-sm font-semibold text-slate-950 transition hover:brightness-110 active:translate-y-px"
             >
               Обсудить проект
             </a>
