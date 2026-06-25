@@ -13,6 +13,11 @@ const featuredCategoryOrder = {
     "legal-services-landing",
     "portfolio-landing",
   ],
+  "Telegram-боты": [
+    "print-calculator-bot",
+    "subscription-sales-bot",
+    "ai-fitness-bot",
+  ],
 };
 
 function sortProjectsForCategory(category, items) {
