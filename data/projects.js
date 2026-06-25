@@ -74,7 +74,7 @@ export const projects = [
     description:
       "Многостраничный сайт для студии или салона с разделами услуг, кейсов, отзывов, контактов и отдельными страницами.",
     features: ["главная и разделы", "страницы услуг", "кейсы и отзывы", "запись или заявка"],
-    image: "/visuals/yuridicheskie.png",
+    image: "/visuals/portfolio.svg",
     primaryLabel: "Обсудить похожий проект",
     secondaryHref: "/#contact",
     icon: Store,
@@ -203,7 +203,7 @@ export const projects = [
     description:
       "Этот промо-сайт: адаптивный одностраничник в тёмном технологичном стиле с витриной проектов и контактными CTA.",
     features: ["первый экран с оффером", "витрина проектов", "адаптив под телефон", "контактные CTA"],
-    image: "/visuals/portfolio.svg",
+    image: "/visuals/yuridicheskie.png",
     primaryLabel: "Открыть сайт",
     primaryHref: "https://yasprosil-ai.vercel.app",
     secondaryHref: "/#contact",
