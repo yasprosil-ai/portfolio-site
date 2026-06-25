@@ -74,7 +74,7 @@ export const projects = [
     description:
       "Многостраничный сайт для студии или салона с разделами услуг, кейсов, отзывов, контактов и отдельными страницами.",
     features: ["главная и разделы", "страницы услуг", "кейсы и отзывы", "запись или заявка"],
-    image: "/visuals/portfolio.svg",
+    image: "/visuals/yuridicheskie.png",
     primaryLabel: "Обсудить похожий проект",
     secondaryHref: "/#contact",
     icon: Store,
