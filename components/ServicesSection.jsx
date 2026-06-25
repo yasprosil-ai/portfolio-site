@@ -17,10 +17,10 @@ export default function ServicesSection() {
             return (
               <article
                 key={service.title}
-                className="liquid-panel group rounded-[1.4rem] p-5 transition duration-300 hover:-translate-y-1 hover:border-cyan-300/32 hover:bg-[#121d2d]"
+                className="group rounded-lg border border-white/10 bg-[#111827] p-5 transition duration-300 hover:-translate-y-1 hover:border-cyan-300/32 hover:bg-[#121d2d]"
               >
                 <div className="mb-5 flex items-center gap-3">
-                  <span className="liquid-chip grid size-11 place-items-center rounded-[1rem] text-cyan-100">
+                  <span className="grid size-11 place-items-center rounded-lg border border-cyan-300/18 bg-cyan-300/8 text-cyan-200">
                     <Icon size={21} strokeWidth={1.8} />
                   </span>
                   <h3 className="text-xl font-semibold text-white">{service.title}</h3>

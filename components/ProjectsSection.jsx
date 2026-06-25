@@ -65,8 +65,8 @@ export default function ProjectsSection() {
                 onClick={() => changeTab(index)}
                 className={`shrink-0 rounded-lg px-4 py-2 text-sm font-semibold transition ${
                   index === activeIndex
-                    ? "liquid-button text-slate-950"
-                    : "liquid-chip text-slate-300 hover:border-white/24 hover:text-white"
+                    ? "bg-white text-slate-950"
+                    : "border border-white/10 bg-white/[0.03] text-slate-300 hover:border-white/24 hover:text-white"
                 }`}
               >
                 {group.category}
@@ -78,7 +78,7 @@ export default function ProjectsSection() {
               <button
                 type="button"
                 onClick={showPrev}
-                className="liquid-outline inline-grid size-11 place-items-center rounded-[1rem] text-white transition hover:border-cyan-300/30 hover:bg-white/5"
+                className="inline-grid size-11 place-items-center rounded-lg border border-white/12 text-white transition hover:border-cyan-300/30 hover:bg-white/5"
                 aria-label="Предыдущая категория"
               >
                 <ChevronLeft size={18} />
@@ -86,14 +86,14 @@ export default function ProjectsSection() {
               <button
                 type="button"
                 onClick={showNext}
-                className="liquid-outline inline-grid size-11 place-items-center rounded-[1rem] text-white transition hover:border-cyan-300/30 hover:bg-white/5"
+                className="inline-grid size-11 place-items-center rounded-lg border border-white/12 text-white transition hover:border-cyan-300/30 hover:bg-white/5"
                 aria-label="Следующая категория"
               >
                 <ChevronRight size={18} />
               </button>
               <Link
                 href="/projects"
-                className="liquid-outline inline-flex min-h-12 w-fit items-center justify-center rounded-[1rem] px-5 text-sm font-semibold text-cyan-100 transition hover:bg-cyan-300/10 active:translate-y-px"
+                className="inline-flex min-h-12 w-fit items-center justify-center rounded-lg border border-cyan-300/24 px-5 text-sm font-semibold text-cyan-100 transition hover:bg-cyan-300/10 active:translate-y-px"
               >
                 Посмотреть все работы
               </Link>
@@ -101,7 +101,7 @@ export default function ProjectsSection() {
           </div>
         </div>
 
-        <div className="liquid-panel rounded-[2rem] p-4 sm:p-5 lg:p-6">
+        <div className="rounded-[24px] border border-white/10 bg-[#0F1628]/72 p-4 shadow-[0_24px_80px_rgba(0,0,0,0.32)] backdrop-blur-xl sm:p-5 lg:p-6">
           {/* Заголовок внутри контейнера — только на десктопе */}
           <div className="mb-6 hidden flex-col gap-3 border-b border-white/10 pb-5 sm:flex sm:flex-row sm:items-end sm:justify-between">
             <div>
@@ -126,7 +126,7 @@ export default function ProjectsSection() {
         <div className="mt-4 sm:hidden">
           <Link
             href="/projects"
-            className="liquid-outline flex min-h-12 w-full items-center justify-center rounded-[1rem] text-sm font-semibold text-cyan-100 transition hover:bg-cyan-300/10 active:translate-y-px"
+            className="flex min-h-12 w-full items-center justify-center rounded-lg border border-cyan-300/24 text-sm font-semibold text-cyan-100 transition hover:bg-cyan-300/10 active:translate-y-px"
           >
             Посмотреть все работы
           </Link>

@@ -14,7 +14,7 @@ export default function ProjectCard({ project, primaryHref = "#contact", seconda
 
   return (
     <>
-      <article className="liquid-panel group flex h-full flex-col rounded-[1.5rem] transition duration-300 hover:-translate-y-1 hover:border-cyan-300/30 hover:bg-[#121d2d]">
+      <article className="group flex h-full flex-col overflow-hidden rounded-lg border border-white/10 bg-[#111827] transition duration-300 hover:-translate-y-1 hover:border-cyan-300/30 hover:bg-[#121d2d]">
         <a
           href={finalPrimaryHref}
           target={primaryExternal ? "_blank" : undefined}
@@ -28,7 +28,7 @@ export default function ProjectCard({ project, primaryHref = "#contact", seconda
             className={`h-full w-full transition duration-700 group-hover:scale-[1.04] ${project.imageContain ? "object-contain" : "object-cover"}`}
             loading="lazy"
           />
-          <div className="liquid-chip absolute left-4 top-4 rounded-[0.95rem] px-3 py-2 text-xs font-semibold text-white">
+          <div className="absolute left-4 top-4 rounded-lg border border-white/12 bg-black/45 px-3 py-2 text-xs font-semibold text-white backdrop-blur">
             {project.status}
           </div>
         </a>
@@ -36,7 +36,7 @@ export default function ProjectCard({ project, primaryHref = "#contact", seconda
         <div className="flex flex-1 flex-col p-5 sm:p-6">
           <div className="mb-5 flex items-center justify-between gap-3">
             <div className="flex min-w-0 flex-wrap items-center gap-2">
-              <span className="liquid-chip rounded-[0.95rem] px-3 py-2 text-xs font-semibold uppercase tracking-[0.14em] text-cyan-100">
+              <span className="rounded-lg border border-cyan-300/20 bg-cyan-300/8 px-3 py-2 text-xs font-semibold uppercase tracking-[0.14em] text-cyan-200">
                 {project.category}
               </span>
               {project.youtubeHref ? (
@@ -44,19 +44,19 @@ export default function ProjectCard({ project, primaryHref = "#contact", seconda
                   href={project.youtubeHref}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center gap-1.5 rounded-[0.95rem] bg-[#FF0000] px-3 py-2 text-xs font-semibold text-white transition hover:bg-[#CC0000] active:translate-y-px"
+                  className="inline-flex items-center gap-1.5 rounded-lg bg-[#FF0000] px-3 py-2 text-xs font-semibold text-white transition hover:bg-[#CC0000] active:translate-y-px"
                 >
                   <Youtube size={13} />
                   Смотреть обзор
                 </a>
               ) : (
-                <span className="liquid-outline inline-flex cursor-not-allowed items-center gap-1.5 rounded-[0.95rem] px-3 py-2 text-xs font-semibold text-slate-500">
+                <span className="inline-flex cursor-not-allowed items-center gap-1.5 rounded-lg border border-white/10 px-3 py-2 text-xs font-semibold text-slate-600">
                   <Youtube size={13} />
                   Скоро обзор
                 </span>
               )}
             </div>
-            <span className="liquid-chip grid size-10 shrink-0 place-items-center rounded-[1rem] text-slate-200">
+            <span className="grid size-10 shrink-0 place-items-center rounded-lg border border-white/10 text-slate-300">
               <Icon size={19} strokeWidth={1.8} />
             </span>
           </div>
@@ -78,7 +78,7 @@ export default function ProjectCard({ project, primaryHref = "#contact", seconda
               href={finalPrimaryHref}
               target={primaryExternal ? "_blank" : undefined}
               rel={primaryExternal ? "noreferrer" : undefined}
-              className="liquid-button inline-flex min-h-11 w-full items-center justify-center gap-2 rounded-[1rem] text-sm font-semibold text-slate-950 transition hover:brightness-110 active:translate-y-px"
+              className="inline-flex min-h-11 w-full items-center justify-center gap-2 rounded-lg bg-white text-sm font-semibold text-slate-950 transition hover:bg-cyan-200 active:translate-y-px"
             >
               {project.primaryLabel}
               <ArrowRight size={15} />
@@ -87,7 +87,7 @@ export default function ProjectCard({ project, primaryHref = "#contact", seconda
               <button
                 type="button"
                 onClick={() => setShowDetails(true)}
-                className="liquid-outline inline-flex min-h-11 w-full items-center justify-center gap-2 rounded-[1rem] text-sm font-semibold text-slate-200 transition hover:border-white/28 hover:text-white active:translate-y-px"
+                className="inline-flex min-h-11 w-full items-center justify-center gap-2 rounded-lg border border-white/12 text-sm font-semibold text-slate-300 transition hover:border-white/28 hover:text-white active:translate-y-px"
               >
                 <FileText size={15} />
                 Какую проблему решает?
@@ -97,7 +97,7 @@ export default function ProjectCard({ project, primaryHref = "#contact", seconda
                 href={finalSecondaryHref}
                 target={secondaryExternal ? "_blank" : undefined}
                 rel={secondaryExternal ? "noreferrer" : undefined}
-                className="liquid-outline inline-flex min-h-11 w-full items-center justify-center rounded-[1rem] text-sm font-semibold text-white transition hover:border-white/28 hover:bg-white/6 active:translate-y-px"
+                className="inline-flex min-h-11 w-full items-center justify-center rounded-lg border border-white/12 text-sm font-semibold text-white transition hover:border-white/28 hover:bg-white/6 active:translate-y-px"
               >
                 {project.secondaryLabel}
               </a>
