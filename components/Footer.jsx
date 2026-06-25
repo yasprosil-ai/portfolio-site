@@ -32,7 +32,7 @@ function IconBtn({ href, Icon, title }) {
       rel="noreferrer"
       title={title}
       aria-label={title}
-      className="grid size-10 place-items-center rounded-xl border border-white/10 bg-white/[0.03] text-slate-400 transition hover:border-white/20 hover:bg-white/8 hover:text-white active:scale-95"
+      className="liquid-outline grid size-10 place-items-center rounded-[1rem] text-slate-300 transition hover:border-white/20 hover:bg-white/8 hover:text-white active:scale-95"
     >
       <Icon size={17} />
     </a>
@@ -45,7 +45,7 @@ export default function Footer() {
       <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[1fr_auto]">
         <div>
           <Link href="/" className="inline-flex items-center gap-3">
-            <span className="grid size-10 place-items-center rounded-lg border border-cyan-300/40 bg-cyan-300/10 text-sm font-black text-cyan-200">
+            <span className="liquid-chip grid size-10 place-items-center rounded-[1rem] text-sm font-black text-cyan-100">
               Я
             </span>
             <span className="font-semibold text-white">Я спросил у ИИ</span>
@@ -62,7 +62,7 @@ export default function Footer() {
               onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
               title="Наверх"
               aria-label="Наверх"
-              className="grid size-10 place-items-center rounded-xl border border-white/10 bg-white/[0.03] text-slate-400 transition hover:border-white/20 hover:bg-white/8 hover:text-white active:scale-95"
+              className="liquid-outline grid size-10 place-items-center rounded-[1rem] text-slate-300 transition hover:border-white/20 hover:bg-white/8 hover:text-white active:scale-95"
             >
               <ArrowUp size={17} />
             </button>
