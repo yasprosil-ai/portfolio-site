@@ -203,7 +203,7 @@ export const projects = [
     description:
       "Этот промо-сайт: адаптивный одностраничник в тёмном технологичном стиле с витриной проектов и контактными CTA.",
     features: ["первый экран с оффером", "витрина проектов", "адаптив под телефон", "контактные CTA"],
-    image: "/visuals/yuridicheskie.png",
+    image: "/visuals/portfolio.svg",
     primaryLabel: "Открыть сайт",
     primaryHref: "https://yasprosil-ai.vercel.app",
     secondaryHref: "/#contact",
@@ -284,7 +284,7 @@ export const projects = [
     description:
       "Юридический лендинг по банкротству физических лиц: спокойный оффер, разбор долгов и рисков, этапы процедуры, кейсы клиентов и форма бесплатной консультации.",
     features: ["банкротство физлиц", "этапы процедуры", "кейсы и FAQ", "бесплатная консультация"],
-    image: "/visuals/portfolio.svg",
+    image: "/visuals/yuridicheskie.png",
     primaryLabel: "Открыть сайт",
     primaryHref: "https://yuridicheskie-uslugi.vercel.app/",
     secondaryHref: "/#contact",
