@@ -6,9 +6,34 @@ import { useEffect, useState } from "react";
 import ProjectCard from "./ProjectCard.jsx";
 import { projectCategories, projects } from "../data/projects.js";
 
+const featuredCategoryOrder = {
+  Лендинги: [
+    "remkvartira-landing",
+    "dental-implant-landing",
+    "legal-services-landing",
+  ],
+};
+
+function sortProjectsForCategory(category, items) {
+  const order = featuredCategoryOrder[category];
+
+  if (!order) return items;
+
+  const ranked = new Map(order.map((slug, index) => [slug, index]));
+
+  return [...items].sort((a, b) => {
+    const aRank = ranked.get(a.slug) ?? Number.MAX_SAFE_INTEGER;
+    const bRank = ranked.get(b.slug) ?? Number.MAX_SAFE_INTEGER;
+    return aRank - bRank;
+  });
+}
+
 const projectsByCategory = projectCategories.map((category) => ({
   category,
-  items: projects.filter((project) => project.category === category),
+  items: sortProjectsForCategory(
+    category,
+    projects.filter((project) => project.category === category),
+  ),
 }));
 
 export default function ProjectsSection() {
