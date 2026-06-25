@@ -5,19 +5,19 @@ export default function Hero() {
     <section id="top" className="relative min-h-[100dvh] w-full max-w-full overflow-x-hidden pt-20">
       <div className="absolute inset-0 -z-10">
         <div className="hero-spotlight absolute -top-28 left-1/2 h-[42rem] w-[86rem] max-w-none -translate-x-1/2 opacity-100" />
-        <div className="absolute left-1/2 top-0 h-px w-[min(80rem,92vw)] -translate-x-1/2 bg-gradient-to-r from-transparent via-amber-200/70 to-transparent" />
-        <div className="absolute bottom-0 right-0 h-[28rem] w-[38rem] bg-[radial-gradient(circle,rgba(37,99,235,0.16),transparent_62%)]" />
+        <div className="absolute left-1/2 top-0 h-px w-[min(80rem,92vw)] -translate-x-1/2 bg-gradient-to-r from-transparent via-amber-200/50 to-transparent" />
+        <div className="absolute bottom-0 right-0 h-[28rem] w-[38rem] bg-[radial-gradient(circle,rgba(37,99,235,0.11),transparent_62%)]" />
       </div>
 
       <div className="mx-auto grid min-h-[calc(96dvh-5rem)] w-full max-w-7xl grid-cols-1 items-center gap-12 px-4 py-10 sm:px-6 lg:grid-cols-[minmax(0,1.12fr)_minmax(0,0.88fr)] lg:px-8 lg:py-14">
         <div className="min-w-0 max-w-full lg:max-w-4xl">
-          <p className="liquid-chip mb-6 inline-flex items-center gap-2 rounded-[1rem] px-3 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-amber-50 shadow-[0_0_30px_rgba(245,158,11,0.16)]">
+          <p className="liquid-chip mb-6 inline-flex items-center gap-2 rounded-[1rem] px-3 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-amber-50 shadow-[0_0_22px_rgba(245,158,11,0.1)]">
             <span className="size-2 rounded-full bg-amber-300 shadow-[0_0_18px_rgba(251,191,36,0.9)]" />
             Я спросил у ИИ
           </p>
           <h1 className="w-full max-w-full break-words text-[2rem] font-bold leading-[1.08] tracking-tight text-white sm:text-5xl lg:max-w-[48rem] lg:text-[3.65rem]">
             Цифровые{" "}
-            <span className="bg-gradient-to-r from-amber-200 via-cyan-100 to-indigo-300 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-amber-100 via-slate-100 to-indigo-200 bg-clip-text text-transparent">
               инструменты
             </span>
             <br />
@@ -30,7 +30,7 @@ export default function Hero() {
           <div className="mt-9 flex flex-col gap-3 sm:flex-row">
             <a
               href="#projects"
-              className="liquid-button inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-[1rem] px-6 text-sm font-semibold text-slate-950 transition hover:brightness-110 active:translate-y-px sm:w-auto"
+              className="liquid-button inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-[1rem] px-6 text-sm font-semibold text-slate-950 transition hover:brightness-105 active:translate-y-px sm:w-auto"
             >
               Смотреть проекты
               <ArrowDownRight size={18} />
@@ -58,7 +58,7 @@ export default function Hero() {
         </div>
 
         <div className="relative mx-auto w-full min-w-0 max-w-full sm:max-w-[32rem] lg:ml-auto">
-          <div className="absolute -inset-6 rounded-[2rem] bg-[radial-gradient(circle,rgba(110,231,255,0.24),transparent_58%)] blur-3xl" />
+          <div className="absolute -inset-6 rounded-[2rem] bg-[radial-gradient(circle,rgba(110,231,255,0.15),transparent_58%)] blur-3xl" />
           <div className="liquid-panel relative rounded-[1.6rem]">
             <div className="flex items-center justify-between border-b border-white/10 px-4 py-3">
               <div className="flex items-center gap-2 text-sm font-medium text-white">
