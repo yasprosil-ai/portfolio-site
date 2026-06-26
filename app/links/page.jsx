@@ -134,23 +134,23 @@ export default function LinksPage() {
           className="reveal-card mb-8 w-full text-center"
         >
           <h2 className="text-xl font-bold leading-tight text-white">
-            Цифровые{" "}
+            Создаю сайты, Telegram-ботов и{" "}
             <span className="bg-gradient-to-r from-amber-300 via-amber-200 to-indigo-400 bg-clip-text text-transparent">
-              инструменты
+              AI-автоматизации
             </span>
-            {" "}для вашего бизнеса
+            {" "}для бизнеса.
           </h2>
           <p className="mt-2.5 text-sm leading-relaxed text-slate-400">
-            Быстро собираю рабочие цифровые продукты от идеи до первой понятной версии
+            Быстро собираю рабочие цифровые продукты от идеи и сырого брифа до первой понятной версии.
           </p>
           <div className="mt-4 flex flex-wrap justify-center gap-1.5">
             {[
-              { label: "Сайты",          href: "/?tab=Сайты#projects"          },
-              { label: "Лендинги",       href: "/?tab=Лендинги#projects"       },
-              { label: "Сайт-визитки",   href: "/?tab=Сайт-визитки#projects"   },
-              { label: "Telegram-боты",  href: "/?tab=Telegram-боты#projects"  },
-              { label: "Мини-аппы",      href: "/?tab=Мини-аппы#projects"      },
-              { label: "MVP",            href: "/?tab=MVP#projects"             },
+              { label: "Сайты",                  href: "/?tab=Сайты#projects"         },
+              { label: "Telegram-боты",           href: "/?tab=Telegram-боты#projects" },
+              { label: "AI-интеграции",           href: "/#services"                   },
+              { label: "Telegram Mini Apps",      href: "/#services"                   },
+              { label: "MVP",                     href: "/?tab=MVP#projects"            },
+              { label: "Доработка и поддержка",   href: "/#services"                   },
             ].map(({ label, href }) => (
               <a
                 key={label}
