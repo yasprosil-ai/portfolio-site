@@ -30,6 +30,7 @@ export default function Header() {
             closeMenu();
             if (isHome) {
               e.preventDefault();
+              window.history.replaceState(null, "", "/");
               window.scrollTo({ top: 0, behavior: "smooth" });
             }
           }}
