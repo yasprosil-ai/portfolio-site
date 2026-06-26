@@ -19,7 +19,7 @@ export default function ServicesSection() {
             return (
               <article
                 key={service.title}
-                className="group flex flex-col rounded-lg border border-white/10 bg-[#111827] p-4 transition duration-300 hover:-translate-y-1 hover:border-cyan-300/32 hover:bg-[#121d2d]"
+                className="flex flex-col rounded-lg border border-white/10 bg-[#111827] p-4 transition duration-300 hover:-translate-y-1.5 hover:border-cyan-300/40 hover:shadow-[0_0_24px_rgba(103,232,249,0.18),0_8px_32px_rgba(0,0,0,0.4)]"
               >
                 <div className="mb-4 flex items-start gap-3">
                   <span className="grid size-11 shrink-0 place-items-center rounded-lg border border-cyan-300/18 bg-cyan-300/8 text-cyan-200">
