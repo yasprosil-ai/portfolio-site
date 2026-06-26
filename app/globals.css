@@ -115,12 +115,13 @@ section[id] {
 
 .hero-visual-glow {
   pointer-events: none;
-  opacity: 0.34;
+  opacity: 0.38;
   background:
-    radial-gradient(ellipse at 22% 32%, rgba(250, 204, 21, 0.28), transparent 32%),
-    radial-gradient(ellipse at 50% 40%, rgba(99, 102, 241, 0.42), transparent 48%),
-    radial-gradient(ellipse at 78% 50%, rgba(103, 232, 249, 0.28), transparent 40%);
-  filter: blur(52px);
+    radial-gradient(circle at 28% 36%, rgba(59, 130, 246, 0.72), transparent 30%),
+    radial-gradient(circle at 52% 42%, rgba(147, 51, 234, 0.42), transparent 46%),
+    radial-gradient(circle at 76% 54%, rgba(103, 232, 249, 0.34), transparent 36%),
+    radial-gradient(circle at 34% 64%, rgba(250, 204, 21, 0.2), transparent 28%);
+  filter: blur(64px);
   animation: hero-visual-glow-breathe 8s ease-in-out infinite alternate;
 }
 
@@ -251,13 +252,13 @@ section[id] {
 
 @keyframes hero-visual-glow-breathe {
   from {
-    opacity: 0.28;
-    background-position: 0% 0%, 50% 50%, 100% 100%;
+    opacity: 0.3;
+    background-position: 0% 0%, 50% 50%, 100% 100%, 30% 70%;
   }
 
   to {
-    opacity: 0.44;
-    background-position: 3% 5%, 52% 45%, 97% 93%;
+    opacity: 0.46;
+    background-position: 3% 4%, 52% 46%, 97% 94%, 34% 66%;
   }
 }
 
