@@ -1,4 +1,5 @@
 import { Check } from "lucide-react";
+import { contacts } from "../data/skills.js";
 import { services } from "../data/services.js";
 
 export default function ServicesSection() {
@@ -46,7 +47,9 @@ export default function ServicesSection() {
                     <p className="mt-1 text-sm font-semibold text-white">{service.deadline}</p>
                   </div>
                   <a
-                    href="#contact"
+                    href={contacts.telegram}
+                    target="_blank"
+                    rel="noreferrer"
                     className="inline-flex items-center gap-1.5 rounded-lg bg-cyan-300/10 px-4 py-2 text-xs font-semibold text-cyan-200 transition hover:bg-cyan-300/18 active:translate-y-px"
                   >
                     Рассчитать →
