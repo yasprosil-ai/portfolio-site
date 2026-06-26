@@ -124,7 +124,7 @@ export default function Hero() {
                 {MODULE_CARDS.map(({ title, text, delay }) => (
                   <div
                     key={title}
-                    className="hero-module-card rounded-lg border border-white/10 bg-white/[0.035] p-4 transition-[border-color,background-color,box-shadow,transform] duration-200 hover:-translate-y-px hover:border-teal-300/[0.32] hover:bg-white/[0.055] hover:shadow-[0_0_24px_rgba(94,234,212,0.11)]"
+                    className="hero-module-card rounded-lg border border-white/10 bg-white/[0.035] p-4 transition-[border-color,background-color,box-shadow,transform] duration-300 hover:-translate-y-1 hover:border-cyan-300/35 hover:bg-white/[0.055] hover:shadow-[0_0_22px_rgba(103,232,249,0.16),0_8px_28px_rgba(0,0,0,0.38)]"
                     style={{ "--card-delay": delay }}
                   >
                     <div className="mb-3 flex items-center gap-2 text-sm font-semibold text-white">
