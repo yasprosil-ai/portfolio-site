@@ -24,7 +24,17 @@ export default function Header() {
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-[#0B0F17]/86 backdrop-blur-xl">
       <nav className="mx-auto flex h-20 w-full max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
-        <Link href="/" onClick={closeMenu} className="group flex h-full min-w-0 items-center gap-3">
+        <Link
+          href="/"
+          onClick={(e) => {
+            closeMenu();
+            if (isHome) {
+              e.preventDefault();
+              window.scrollTo({ top: 0, behavior: "smooth" });
+            }
+          }}
+          className="group flex h-full min-w-0 items-center gap-3"
+        >
           <span className="grid size-10 place-items-center rounded-lg border border-cyan-300/40 bg-cyan-300/10 text-sm font-black text-cyan-200 shadow-[0_0_28px_rgba(34,211,238,0.22)]">
             Я
           </span>

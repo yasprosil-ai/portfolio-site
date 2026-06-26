@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Mail, ArrowUp } from "lucide-react";
 import { FaTelegram, FaYoutube, FaTiktok, FaInstagram, FaGithub } from "react-icons/fa6";
 
@@ -40,6 +41,10 @@ function IconBtn({ href, Icon, title }) {
 }
 
 export default function Footer() {
+  const pathname = usePathname();
+  const isHome = pathname === "/";
+  const resolveHref = (href) => (isHome ? href : `/${href}`);
+
   return (
     <footer className="border-t border-white/10 px-4 py-10 sm:px-6 lg:px-8">
       <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[1fr_auto]">
@@ -80,7 +85,7 @@ export default function Footer() {
               {navItems.map((item) => (
                 <Link
                   key={item.href}
-                  href={item.href}
+                  href={resolveHref(item.href)}
                   className="text-sm text-slate-400 transition hover:text-white"
                 >
                   {item.label}
