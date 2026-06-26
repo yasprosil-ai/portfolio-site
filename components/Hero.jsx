@@ -75,7 +75,6 @@ export default function Hero() {
           className="hero-reveal relative isolate mx-auto w-full min-w-0 max-w-full overflow-visible sm:max-w-[32rem] lg:ml-auto"
           style={{ "--hero-delay": "560ms" }}
         >
-          <div className="heroGlow" aria-hidden="true" />
           <div
             className="overflow-hidden rounded-lg border border-indigo-300/28 bg-[#10172A]/88 shadow-2xl shadow-black/40 backdrop-blur-xl"
             style={{
