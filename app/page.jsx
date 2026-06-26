@@ -11,7 +11,7 @@ import Footer from "../components/Footer.jsx";
 
 export default function Home() {
   return (
-    <div className="site-shell home-shell min-h-dvh w-full max-w-full overflow-x-hidden text-[#F9FAFB] antialiased selection:bg-amber-300 selection:text-slate-950">
+    <div className="site-shell min-h-dvh w-full max-w-full overflow-x-hidden text-[#F9FAFB] antialiased selection:bg-amber-300 selection:text-slate-950">
       <Header />
       <main>
         <Hero />

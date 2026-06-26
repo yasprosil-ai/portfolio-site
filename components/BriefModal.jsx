@@ -69,7 +69,7 @@ function BriefModalOverlay({ onClose }) {
 
 // Кнопка-триггер — переиспользуется на всех страницах услуг.
 // className и children можно переопределить через пропсы.
-export function BriefModalTrigger({ label = "Обсудить проект", className, children }) {
+export function BriefModalTrigger({ label = "Обсудить проект", className }) {
   const { open } = useBriefModal();
 
   const defaultClass =
@@ -77,7 +77,7 @@ export function BriefModalTrigger({ label = "Обсудить проект", cla
 
   return (
     <button type="button" onClick={open} className={className ?? defaultClass}>
-      {children ?? label}
+      {label}
     </button>
   );
 }
