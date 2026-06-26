@@ -48,7 +48,7 @@ export default function ServicesSection() {
                   </div>
                   <Link
                     href={`/services/${service.slug}`}
-                    className="inline-flex items-center gap-1.5 rounded-lg bg-cyan-300/10 px-4 py-2 text-xs font-semibold text-cyan-200 transition hover:bg-cyan-300/18 active:translate-y-px"
+                    className="inline-flex items-center gap-1.5 rounded-lg border border-cyan-300/30 bg-cyan-300/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.14em] text-cyan-200 transition hover:bg-cyan-300/18 active:translate-y-px"
                   >
                     Подробнее →
                   </Link>
