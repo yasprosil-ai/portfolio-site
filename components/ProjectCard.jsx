@@ -70,7 +70,7 @@ export default function ProjectCard({ project }) {
                 className="inline-flex items-center gap-1.5 rounded-lg border border-white/16 bg-white/6 px-3 py-2 text-xs font-semibold text-white transition hover:border-white/30 hover:bg-white/10 active:translate-y-px"
               >
                 <Globe size={13} />
-                Сайт
+                Открыть
               </a>
             )}
 
