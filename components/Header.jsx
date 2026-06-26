@@ -36,7 +36,16 @@ export default function Header() {
           }}
           className="group flex h-full min-w-0 items-center gap-3"
         >
-          <span className="grid size-10 place-items-center rounded-lg border border-cyan-300/40 bg-cyan-300/10 text-sm font-black text-cyan-200 shadow-[0_0_28px_rgba(34,211,238,0.22)]">
+          <span className="relative grid size-10 place-items-center overflow-hidden rounded-lg border border-cyan-300/40 bg-cyan-300/10 text-sm font-black text-cyan-200 shadow-[0_0_28px_rgba(34,211,238,0.22)]">
+            <img
+              src="/avatar.png"
+              alt=""
+              aria-hidden="true"
+              width={40}
+              height={40}
+              className="absolute inset-0 size-full object-cover object-[center_25%]"
+              onError={(e) => (e.currentTarget.style.display = "none")}
+            />
             Я
           </span>
           <span className="text-sm font-semibold tracking-wide text-white sm:text-base">Я спросил у ИИ</span>
