@@ -19,11 +19,12 @@ export default function ServicesSection() {
             return (
               <article
                 key={service.title}
-                className="flex flex-col rounded-lg border border-white/10 bg-[#111827] p-4 transition duration-300 hover:-translate-y-1.5 hover:border-cyan-300/40 hover:shadow-[0_0_24px_rgba(103,232,249,0.18),0_8px_32px_rgba(0,0,0,0.4)]"
+                className="service-card flex flex-col rounded-lg border border-white/10 bg-[#111827] p-4 transition duration-300 hover:-translate-y-1.5 hover:border-cyan-300/40 hover:shadow-[0_0_24px_rgba(103,232,249,0.18),0_8px_32px_rgba(0,0,0,0.4)]"
               >
                 <div className="mb-4 flex items-start gap-3">
-                  <span className="grid size-11 shrink-0 place-items-center rounded-lg border border-cyan-300/18 bg-cyan-300/8 text-cyan-200">
-                    <Icon size={21} strokeWidth={1.8} />
+                  <span className="relative grid size-11 shrink-0 place-items-center overflow-hidden rounded-lg border border-cyan-300/18 bg-cyan-300/8 text-cyan-200">
+                    <span className="service-icon-glow" />
+                    <Icon size={21} strokeWidth={1.8} className="relative z-10" />
                   </span>
                   <div>
                     <h3 className="text-xl font-semibold text-white">{service.title}</h3>
