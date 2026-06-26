@@ -1,6 +1,13 @@
 import { ArrowDownRight, CheckCircle2, TerminalSquare } from "lucide-react";
 import { BriefModalTrigger } from "./BriefModal.jsx";
 
+const MODULE_CARDS = [
+  { title: "Сайт",          text: "структура, дизайн, запуск",     delay: "3450ms" },
+  { title: "Telegram-бот",  text: "сценарии, заявки, уведомления", delay: "3700ms" },
+  { title: "AI-интеграции", text: "ответы, заявки и рутина",        delay: "3950ms" },
+  { title: "MVP",           text: "быстрый запуск идеи",            delay: "4200ms" },
+];
+
 export default function Hero() {
   return (
     <section id="top" className="relative min-h-[100dvh] w-full max-w-full overflow-x-hidden pt-20">
@@ -111,15 +118,16 @@ export default function Hero() {
               </div>
 
               <div className="grid gap-3 sm:grid-cols-2">
-                {[
-                  ["Сайт", "структура, дизайн, запуск"],
-                  ["Telegram-бот", "сценарии, заявки, уведомления"],
-                  ["AI-интеграции", "ответы, заявки и рутина"],
-                  ["MVP", "быстрый запуск идеи"],
-                ].map(([title, text]) => (
-                  <div key={title} className="rounded-lg border border-white/10 bg-white/[0.035] p-4">
+                {MODULE_CARDS.map(({ title, text, delay }) => (
+                  <div
+                    key={title}
+                    className="hero-module-card rounded-lg border border-white/10 bg-white/[0.035] p-4 transition-[border-color,background-color] duration-200 hover:border-white/[0.18] hover:bg-white/[0.055]"
+                    style={{ "--card-delay": delay }}
+                  >
                     <div className="mb-3 flex items-center gap-2 text-sm font-semibold text-white">
-                      <CheckCircle2 size={16} className="text-emerald-300" />
+                      <span className="hero-module-icon">
+                        <CheckCircle2 size={16} className="text-emerald-300" />
+                      </span>
                       {title}
                     </div>
                     <p className="text-sm text-slate-400">{text}</p>
