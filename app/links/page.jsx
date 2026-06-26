@@ -150,7 +150,7 @@ export default function LinksPage() {
               { label: "AI-интеграции",           href: "/#services"                   },
               { label: "Telegram Mini Apps",      href: "/#services"                   },
               { label: "MVP",                     href: "/?tab=MVP#projects"            },
-              { label: "Доработка и поддержка",   href: "/#services"                   },
+              { label: "Поддержка",               href: "/#services"                   },
             ].map(({ label, href }) => (
               <a
                 key={label}
