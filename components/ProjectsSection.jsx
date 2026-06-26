@@ -15,8 +15,6 @@ const featuredCategoryOrder = {
   ],
   "Telegram-боты": [
     "print-calculator-bot",
-    "subscription-sales-bot",
-    "ai-fitness-bot",
   ],
 };
 
@@ -163,7 +161,7 @@ export default function ProjectsSection() {
             <div className="grid gap-5 xl:grid-cols-3">
               {activeGroup.items.slice(0, 3).map((project, i) => (
                 <div key={project.slug} className={i > 0 ? "hidden sm:block" : ""}>
-                  <ProjectCard project={project} primaryHref="#contact" secondaryHref="/projects" />
+                  <ProjectCard project={project} primaryHref="#contact" />
                 </div>
               ))}
             </div>
