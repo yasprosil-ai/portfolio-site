@@ -98,10 +98,10 @@ export default function Hero() {
                   </span>
                 </div>
                 <div className="min-w-0 space-y-3 font-mono text-sm">
-                  <FlowLine label="идея" value="сырой бриф" valueDelay="830ms" />
-                  <FlowLine label="промпт" value="структура и UX" valueDelay="1130ms" />
-                  <FlowLine label="прототип" value="сайт, бот или mini app" valueDelay="1430ms" />
-                  <FlowLine label="запуск" value="первая рабочая версия" active valueDelay="1730ms" />
+                  <FlowLine label="идея" value="сырой бриф" valueDelay="1120ms" />
+                  <FlowLine label="промпт" value="структура и UX" valueDelay="1570ms" />
+                  <FlowLine label="прототип" value="сайт, бот или mini app" valueDelay="2020ms" />
+                  <FlowLine label="запуск" value="первая рабочая версия" active valueDelay="2470ms" />
                 </div>
               </div>
 

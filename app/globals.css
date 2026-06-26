@@ -89,7 +89,7 @@ section[id] {
 
 .hero-step-text {
   opacity: 0;
-  animation: hero-step-reveal 380ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation: hero-step-reveal 540ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
   animation-delay: var(--step-delay, 0ms);
 }
 
@@ -97,7 +97,7 @@ section[id] {
   opacity: 0.72;
   color: rgb(148 163 184);
   animation: hero-status-finalize 420ms ease-out forwards;
-  animation-delay: 1910ms;
+  animation-delay: 3090ms;
 }
 
 .hero-status-dot {
@@ -109,8 +109,8 @@ section[id] {
   opacity: 0;
   animation:
     hero-status-dot-enter 240ms ease-out forwards,
-    hero-status-dot-pulse 2.8s ease-in-out 2150ms infinite;
-  animation-delay: 1910ms, 2150ms;
+    hero-status-dot-pulse 2.8s ease-in-out 3340ms infinite;
+  animation-delay: 3090ms, 3340ms;
 }
 
 .hero-visual-glow {
