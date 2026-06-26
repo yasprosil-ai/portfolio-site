@@ -1,4 +1,5 @@
-import { ArrowDownRight, ArrowUpRight, CheckCircle2, TerminalSquare } from "lucide-react";
+import { ArrowDownRight, CheckCircle2, TerminalSquare } from "lucide-react";
+import { BriefModalTrigger } from "./BriefModal.jsx";
 
 export default function Hero() {
   return (
@@ -28,13 +29,10 @@ export default function Hero() {
           </p>
 
           <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-            <a
-              href="#brief"
+            <BriefModalTrigger
+              label="Обсудить проект"
               className="inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-amber-300 via-amber-200 to-indigo-500 px-6 text-sm font-semibold text-slate-950 shadow-[0_18px_52px_rgba(79,70,229,0.28)] transition hover:brightness-110 active:translate-y-px sm:w-auto"
-            >
-              Обсудить проект
-              <ArrowUpRight size={18} />
-            </a>
+            />
             <a
               href="#projects"
               className="inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-lg border border-white/14 px-6 text-sm font-semibold text-white transition hover:border-white/30 hover:bg-white/6 active:translate-y-px sm:w-auto"
@@ -70,7 +68,7 @@ export default function Hero() {
             <div className="flex items-center justify-between border-b border-white/10 px-4 py-3">
               <div className="flex items-center gap-2 text-sm font-medium text-white">
                 <TerminalSquare size={18} className="text-cyan-300" />
-                yasprosil.ai
+                yasprosil-ai
               </div>
               <div className="flex gap-1.5">
                 <span className="size-2 rounded-full bg-rose-400" />
@@ -87,7 +85,7 @@ export default function Hero() {
                 <div className="min-w-0 space-y-3 font-mono text-sm">
                   <FlowLine label="идея" value="сырой бриф" />
                   <FlowLine label="промпт" value="структура и UX" />
-                  <FlowLine label="прототип" value="сайт, бот или апп" />
+                  <FlowLine label="прототип" value="сайт, бот или mini app" />
                   <FlowLine label="запуск" value="первая рабочая версия" active />
                 </div>
               </div>
@@ -96,7 +94,7 @@ export default function Hero() {
                 {[
                   ["Сайт", "структура, дизайн, запуск"],
                   ["Telegram-бот", "сценарии, заявки, уведомления"],
-                  ["AI-интеграция", "автоматизация рутины и ответы ИИ"],
+                  ["AI-интеграции", "ответы, заявки и рутина"],
                   ["MVP", "быстрый запуск идеи"],
                 ].map(([title, text]) => (
                   <div key={title} className="rounded-lg border border-white/10 bg-white/[0.035] p-4">
