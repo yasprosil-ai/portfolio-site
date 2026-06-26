@@ -24,7 +24,7 @@ export default function Hero() {
             style={{ "--hero-delay": "60ms" }}
           >
             <span className="size-2 rounded-full bg-amber-300 shadow-[0_0_18px_rgba(251,191,36,0.9)]" />
-            Я спросил у ИИ
+            От идеи до первой версии
           </p>
           <h1
             className="hero-reveal w-full max-w-full break-words text-[2rem] font-bold leading-[1.08] tracking-tight text-white sm:text-5xl lg:max-w-[48rem] lg:text-[3.65rem]"
