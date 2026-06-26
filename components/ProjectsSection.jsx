@@ -72,9 +72,9 @@ export default function ProjectsSection() {
       <div className="mx-auto max-w-7xl">
         <div className="mb-12 flex flex-col justify-between gap-6 lg:flex-row lg:items-end">
           <SectionIntro
-            eyebrow="Проекты"
-            title="Категории работ в удобной витрине"
-            text="На главной показываю по три проекта в выбранной категории. Все работы собраны на отдельной странице."
+            eyebrow="Портфолио"
+            title="Портфолио проектов в удобной витрине"
+            text="На главной показываю по три работы в выбранной категории. Полное портфолио собрано на отдельной странице."
           />
         </div>
 
@@ -118,7 +118,7 @@ export default function ProjectsSection() {
                 href="/projects"
                 className="inline-flex min-h-12 w-fit items-center justify-center rounded-lg border border-cyan-300/24 px-5 text-sm font-semibold text-cyan-100 transition hover:bg-cyan-300/10 active:translate-y-px"
               >
-                Посмотреть все работы
+                Смотреть всё портфолио
               </Link>
             </div>
           </div>
@@ -132,7 +132,7 @@ export default function ProjectsSection() {
               <h3 className="mt-3 text-2xl font-semibold text-white sm:text-3xl">{activeGroup.category}</h3>
             </div>
             <p className="max-w-2xl text-sm leading-6 text-slate-400">
-              Три проекта в ряд для быстрого просмотра. Полный список откроется на отдельной странице.
+              Три работы в ряд для быстрого просмотра. Полное портфолио откроется на отдельной странице.
             </p>
           </div>
 
@@ -168,7 +168,7 @@ export default function ProjectsSection() {
             href="/projects"
             className="flex min-h-12 w-full items-center justify-center rounded-lg border border-cyan-300/24 text-sm font-semibold text-cyan-100 transition hover:bg-cyan-300/10 active:translate-y-px"
           >
-            Посмотреть все работы
+            Смотреть всё портфолио
           </Link>
         </div>
       </div>

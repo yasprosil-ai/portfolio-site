@@ -24,8 +24,8 @@ export const contacts = {
 };
 
 export const navItems = [
-  { label: "Проекты", href: "#projects" },
   { label: "Услуги", href: "#services" },
+  { label: "Портфолио", href: "#projects" },
   { label: "Процесс", href: "#process" },
   { label: "Обо мне", href: "#about" },
   { label: "Бриф", href: "#brief" },

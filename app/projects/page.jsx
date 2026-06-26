@@ -5,7 +5,7 @@ import ProjectsFilter from "../../components/ProjectsFilter.jsx";
 
 export const metadata = {
   title: "Все работы | Я спросил у ИИ",
-  description: "Все проекты Я спросил у ИИ: сайты, лендинги, Telegram-боты, мини-аппы и MVP.",
+  description: "Портфолио Я спросил у ИИ: сайты, лендинги, Telegram-боты, мини-аппы и MVP.",
 };
 
 export default function ProjectsPage() {
@@ -17,7 +17,7 @@ export default function ProjectsPage() {
           <div className="mb-10 flex flex-col gap-5 rounded-[28px] border border-white/10 bg-[#0F1628]/72 p-6 shadow-[0_24px_80px_rgba(0,0,0,0.32)] backdrop-blur-xl sm:p-8">
             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-cyan-300">Все работы</p>
             <h1 className="max-w-4xl text-4xl font-semibold leading-tight text-white md:text-6xl">
-              Полная подборка проектов по пяти категориям
+              Полное портфолио по шести категориям
             </h1>
             <p className="max-w-3xl text-base leading-7 text-slate-300">
               Здесь собраны все кейсы и концепты: сайты, лендинги, Telegram-боты, мини-аппы и MVP.

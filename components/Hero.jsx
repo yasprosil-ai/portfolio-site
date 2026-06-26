@@ -16,39 +16,46 @@ export default function Hero() {
             Я спросил у ИИ
           </p>
           <h1 className="w-full max-w-full break-words text-[2rem] font-bold leading-[1.08] tracking-tight text-white sm:text-5xl lg:max-w-[48rem] lg:text-[3.65rem]">
-            Цифровые{" "}
+            Создаю сайты,{" "}
             <span className="bg-gradient-to-r from-amber-300 via-amber-200 to-indigo-500 bg-clip-text text-transparent">
-              инструменты
+              Telegram-ботов
             </span>
             <br />
-            для вашего бизнеса
+            и AI-автоматизации для бизнеса
           </h1>
           <p className="mt-6 max-w-2xl text-xs font-semibold uppercase tracking-[0.16em] text-slate-400 sm:text-sm">
-            Быстро собираю рабочие цифровые продукты от идеи до первой понятной версии
+            Быстро собираю рабочие цифровые продукты от идеи и сырого брифа до первой понятной версии.
           </p>
 
           <div className="mt-9 flex flex-col gap-3 sm:flex-row">
             <a
-              href="#projects"
+              href="#brief"
               className="inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-amber-300 via-amber-200 to-indigo-500 px-6 text-sm font-semibold text-slate-950 shadow-[0_18px_52px_rgba(79,70,229,0.28)] transition hover:brightness-110 active:translate-y-px sm:w-auto"
             >
-              Смотреть проекты
-              <ArrowDownRight size={18} />
+              Обсудить проект
+              <ArrowUpRight size={18} />
             </a>
             <a
-              href="#brief"
+              href="#projects"
               className="inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-lg border border-white/14 px-6 text-sm font-semibold text-white transition hover:border-white/30 hover:bg-white/6 active:translate-y-px sm:w-auto"
             >
-              Рассказать о задаче
-              <ArrowUpRight size={18} />
+              Смотреть портфолио
+              <ArrowDownRight size={18} />
             </a>
           </div>
 
           <div className="mt-8 flex max-w-full flex-wrap gap-2 text-sm text-slate-300">
-            {["Сайты", "Лендинги", "Сайт-визитки", "Telegram-боты", "Мини-аппы", "MVP"].map((item) => (
+            {[
+              ["Сайты", "/services/websites"],
+              ["Telegram-боты", "/services/telegram-bots"],
+              ["AI-интеграции", "/services/ai"],
+              ["Telegram Mini Apps", "/services/mini-apps"],
+              ["MVP", "/services/mvp"],
+              ["Доработка и поддержка", "/services/support"],
+            ].map(([item, href]) => (
               <a
                 key={item}
-                href={`/?tab=${encodeURIComponent(item)}#projects`}
+                href={href}
                 className="rounded-lg border border-white/10 bg-white/[0.03] px-3 py-2 transition hover:border-white/22 hover:bg-white/[0.07] hover:text-white active:scale-95"
               >
                 {item}
@@ -63,7 +70,7 @@ export default function Hero() {
             <div className="flex items-center justify-between border-b border-white/10 px-4 py-3">
               <div className="flex items-center gap-2 text-sm font-medium text-white">
                 <TerminalSquare size={18} className="text-cyan-300" />
-                запуск.ai
+                yasprosil.ai
               </div>
               <div className="flex gap-1.5">
                 <span className="size-2 rounded-full bg-rose-400" />
@@ -87,9 +94,9 @@ export default function Hero() {
 
               <div className="grid gap-3 sm:grid-cols-2">
                 {[
-                  ["сайт", "разделы и структура"],
-                  ["лендинг", "оффер и форма"],
-                  ["Telegram-бот", "сценарий и заявки"],
+                  ["Сайт", "структура, дизайн, запуск"],
+                  ["Telegram-бот", "сценарии, заявки, уведомления"],
+                  ["AI-интеграция", "автоматизация рутины и ответы ИИ"],
                   ["MVP", "быстрый запуск идеи"],
                 ].map(([title, text]) => (
                   <div key={title} className="rounded-lg border border-white/10 bg-white/[0.035] p-4">
