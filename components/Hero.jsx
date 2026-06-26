@@ -75,17 +75,7 @@ export default function Hero() {
           className="hero-reveal relative isolate mx-auto w-full min-w-0 max-w-full overflow-visible sm:max-w-[32rem] lg:ml-auto"
           style={{ "--hero-delay": "560ms" }}
         >
-          <div
-            aria-hidden="true"
-            style={{
-              position: "absolute",
-              inset: "-50px",
-              background: "red",
-              opacity: 0.5,
-              zIndex: 0,
-              pointerEvents: "none",
-            }}
-          />
+          <div className="heroGlow" aria-hidden="true" />
           <div
             className="overflow-hidden rounded-lg border border-indigo-300/28 bg-[#10172A]/88 shadow-2xl shadow-black/40 backdrop-blur-xl"
             style={{
@@ -97,16 +87,6 @@ export default function Hero() {
               <div className="flex items-center gap-2 text-sm font-medium text-white">
                 <TerminalSquare size={18} className="text-cyan-300" />
                 yasprosil-ai
-                <span
-                  style={{
-                    color: "red",
-                    fontSize: "12px",
-                    fontWeight: 700,
-                    marginLeft: "8px",
-                  }}
-                >
-                  GLOW TEST
-                </span>
               </div>
               <div className="flex gap-1.5">
                 <span className="size-2 rounded-full bg-rose-400" />

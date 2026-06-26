@@ -113,16 +113,19 @@ section[id] {
   animation-delay: 3090ms, 3340ms;
 }
 
-.heroGlowDebug {
+.heroGlow {
+  position: absolute;
+  inset: -45px;
+  z-index: 0;
   pointer-events: none;
-  opacity: 0.52;
+  border-radius: 36px;
   background:
-    radial-gradient(circle at 30% 30%, rgba(59, 130, 246, 0.82), transparent 34%),
-    radial-gradient(circle at 68% 38%, rgba(147, 51, 234, 0.5), transparent 44%),
-    radial-gradient(circle at 72% 72%, rgba(103, 232, 249, 0.38), transparent 36%),
-    radial-gradient(circle at 34% 72%, rgba(250, 204, 21, 0.24), transparent 28%);
-  filter: blur(68px);
-  animation: hero-visual-glow-breathe 8s ease-in-out infinite alternate;
+    radial-gradient(circle at 25% 25%, rgba(59, 130, 246, 0.38), transparent 42%),
+    radial-gradient(circle at 75% 65%, rgba(147, 51, 234, 0.28), transparent 48%),
+    radial-gradient(circle at 55% 85%, rgba(245, 158, 11, 0.16), transparent 42%);
+  filter: blur(48px);
+  opacity: 0.38;
+  animation: heroGlowBreath 8s ease-in-out infinite alternate;
 }
 
 .reveal-card {
@@ -250,15 +253,13 @@ section[id] {
   }
 }
 
-@keyframes hero-visual-glow-breathe {
+@keyframes heroGlowBreath {
   from {
     opacity: 0.42;
-    background-position: 0% 0%, 50% 50%, 100% 100%, 30% 70%;
   }
 
   to {
-    opacity: 0.58;
-    background-position: 4% 4%, 52% 46%, 96% 92%, 34% 66%;
+    opacity: 0.26;
   }
 }
 
@@ -386,7 +387,7 @@ section[id] {
   .hero-step-text,
   .hero-status-final,
   .hero-status-dot,
-  .heroGlowDebug {
+  .heroGlow {
     opacity: 1 !important;
     transform: none !important;
     animation: none !important;
