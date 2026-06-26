@@ -8,8 +8,8 @@ export default function ServicesSection() {
       <div className="mx-auto max-w-7xl">
         <SectionIntro
           eyebrow="Услуги"
-          title="Что я могу собрать"
-          text="Делаю простые, понятные и рабочие цифровые решения для заявок, теста идей, презентации услуг и запуска MVP."
+          title="Собираю рабочие цифровые решения для бизнеса"
+          text="Делаю простые, понятные и рабочие цифровые решения для заявок, продаж, автоматизации, презентации услуг и быстрой проверки идей."
         />
 
         <div className="mt-12 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
