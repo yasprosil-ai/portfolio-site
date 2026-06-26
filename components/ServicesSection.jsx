@@ -50,9 +50,10 @@ export default function ServicesSection() {
                   </div>
                   <Link
                     href={`/services/${service.slug}`}
-                    className="rounded-lg border border-amber-300/30 bg-amber-300/10 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.18em] text-amber-100 transition hover:bg-amber-300/18 active:translate-y-px"
+                    className="relative overflow-hidden rounded-lg border border-amber-300/30 bg-amber-300/10 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.18em] text-amber-100 transition hover:bg-amber-300/18 active:translate-y-px"
                   >
-                    Подробнее
+                    <span className="service-btn-glow" />
+                    <span className="relative z-10">Подробнее</span>
                   </Link>
                 </div>
               </article>
