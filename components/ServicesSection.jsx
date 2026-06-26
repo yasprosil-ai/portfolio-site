@@ -17,9 +17,10 @@ export default function ServicesSection() {
             const Icon = service.icon;
 
             return (
-              <article
+              <Link
                 key={service.title}
-                className="service-card flex flex-col rounded-lg border border-white/10 bg-[#111827] p-4 transition duration-300 hover:-translate-y-1.5 hover:border-cyan-300/40 hover:shadow-[0_0_24px_rgba(103,232,249,0.18),0_8px_32px_rgba(0,0,0,0.4)]"
+                href={`/services/${service.slug}`}
+                className="service-card flex flex-col rounded-lg border border-white/10 bg-[#111827] p-4 transition duration-300 hover:-translate-y-1.5 hover:border-cyan-300/40 hover:shadow-[0_0_24px_rgba(103,232,249,0.18),0_8px_32px_rgba(0,0,0,0.4)] cursor-pointer"
               >
                 <div className="mb-4 flex items-start gap-3">
                   <span className="relative grid size-11 shrink-0 place-items-center overflow-hidden rounded-lg border border-cyan-300/18 bg-cyan-300/8 text-cyan-200">
@@ -48,15 +49,12 @@ export default function ServicesSection() {
                     <p className="text-[10px] font-semibold uppercase tracking-[0.14em] text-slate-500">Срок</p>
                     <p className="mt-0.5 text-sm font-semibold text-white">{service.deadline}</p>
                   </div>
-                  <Link
-                    href={`/services/${service.slug}`}
-                    className="relative overflow-hidden rounded-lg border border-amber-300/30 bg-amber-300/10 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.18em] text-amber-100 transition hover:bg-amber-300/18 active:translate-y-px"
-                  >
+                  <span className="relative overflow-hidden rounded-lg border border-amber-300/30 bg-amber-300/10 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.18em] text-amber-100 transition hover:bg-amber-300/18 active:translate-y-px">
                     <span className="service-btn-glow" />
                     <span className="relative z-10">Подробнее</span>
-                  </Link>
+                  </span>
                 </div>
-              </article>
+              </Link>
             );
           })}
         </div>
