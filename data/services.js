@@ -2,6 +2,7 @@ import { Blocks, Bot, BrainCircuit, Globe, LayoutTemplate, Rocket } from "lucide
 
 export const services = [
   {
+    slug: "landings",
     title: "Лендинги",
     icon: LayoutTemplate,
     text: "Одностраничные сайты для услуг, продуктов, экспертов, запусков и теста бизнес-идей.",
@@ -9,6 +10,7 @@ export const services = [
     deadline: "1–3 дня",
   },
   {
+    slug: "sites",
     title: "Сайты",
     icon: Globe,
     text: "Многостраничные сайты для студий, экспертов, брендов и сервисов с разделами, кейсами и контентом.",
@@ -16,6 +18,7 @@ export const services = [
     deadline: "3–7 дней",
   },
   {
+    slug: "telegram-bots",
     title: "Telegram-боты",
     icon: Bot,
     text: "Боты для продаж, записи, расчётов и заявок: от простых сценариев до приёма оплат и админ-логики.",
@@ -23,6 +26,7 @@ export const services = [
     deadline: "2–5 дней",
   },
   {
+    slug: "ai",
     title: "AI-интеграции",
     icon: BrainCircuit,
     text: "Подключаю Claude к ботам и приложениям: распознавание фото, расчёты, диалоговая логика и данные пользователя.",
@@ -30,6 +34,7 @@ export const services = [
     deadline: "3–7 дней",
   },
   {
+    slug: "mini-apps",
     title: "Мини-аппы",
     icon: Blocks,
     text: "Небольшие веб-приложения: калькуляторы, квизы, формы, генераторы и интерактивные интерфейсы.",
@@ -37,6 +42,7 @@ export const services = [
     deadline: "1–3 дня",
   },
   {
+    slug: "mvp",
     title: "MVP",
     icon: Rocket,
     text: "Первые рабочие версии цифровых продуктов, чтобы быстро проверить гипотезу и показать идею в действии.",
