@@ -1,4 +1,4 @@
-import { Check, Globe } from "lucide-react";
+import { ArrowLeft, Check, Globe } from "lucide-react";
 import Link from "next/link";
 import Header from "../../../components/Header.jsx";
 import Footer from "../../../components/Footer.jsx";
@@ -108,7 +108,7 @@ export default function WebsitesPage() {
           </section>
 
           {/* Финальный CTA */}
-          <section className="flex flex-col items-center gap-5 rounded-[24px] border border-amber-300/20 bg-amber-300/5 px-6 py-12 text-center sm:px-8">
+          <section className="mb-8 flex flex-col items-center gap-5 rounded-[24px] border border-amber-300/20 bg-amber-300/5 px-6 py-12 text-center sm:px-8">
             <h2 className="max-w-xl text-2xl font-semibold leading-snug text-white sm:text-3xl">
               Не знаете, какой сайт выбрать?
             </h2>
@@ -124,6 +124,13 @@ export default function WebsitesPage() {
               Обсудить сайт
             </a>
           </section>
+          <Link
+            href="/#services"
+            className="inline-flex items-center gap-2 text-sm font-semibold text-cyan-200 transition hover:text-white"
+          >
+            <ArrowLeft size={16} />
+            Назад к видам услуг
+          </Link>
         </div>
       </main>
       <Footer />
