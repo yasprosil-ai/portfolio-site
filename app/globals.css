@@ -115,12 +115,12 @@ section[id] {
 
 .hero-visual-glow {
   pointer-events: none;
-  opacity: 0.26;
+  opacity: 0.34;
   background:
-    radial-gradient(ellipse at 26% 34%, rgba(250, 204, 21, 0.22), transparent 30%),
-    radial-gradient(ellipse at 52% 40%, rgba(99, 102, 241, 0.3), transparent 44%),
-    radial-gradient(ellipse at 72% 48%, rgba(103, 232, 249, 0.2), transparent 38%);
-  filter: blur(34px);
+    radial-gradient(ellipse at 22% 32%, rgba(250, 204, 21, 0.28), transparent 32%),
+    radial-gradient(ellipse at 50% 40%, rgba(99, 102, 241, 0.42), transparent 48%),
+    radial-gradient(ellipse at 78% 50%, rgba(103, 232, 249, 0.28), transparent 40%);
+  filter: blur(52px);
   animation: hero-visual-glow-breathe 8s ease-in-out infinite alternate;
 }
 
@@ -251,13 +251,13 @@ section[id] {
 
 @keyframes hero-visual-glow-breathe {
   from {
-    opacity: 0.2;
+    opacity: 0.28;
     background-position: 0% 0%, 50% 50%, 100% 100%;
   }
 
   to {
-    opacity: 0.38;
-    background-position: 4% 6%, 52% 44%, 96% 92%;
+    opacity: 0.44;
+    background-position: 3% 5%, 52% 45%, 97% 93%;
   }
 }
 
