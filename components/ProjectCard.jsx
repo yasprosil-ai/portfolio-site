@@ -19,13 +19,13 @@ export default function ProjectCard({ project }) {
             }`}
             loading="lazy"
           />
-          <span className="absolute left-3 top-3 rounded-md border border-white/20 bg-black/55 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.14em] text-white/85 backdrop-blur-sm">
+          <span className="absolute left-3 top-3 rounded-full border border-cyan-300/25 bg-slate-950/65 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.14em] text-cyan-200/95 backdrop-blur-sm">
             {project.category}
           </span>
         </div>
 
-        <div className="flex flex-col gap-3 p-4 sm:p-5">
-          <h3 className="text-lg font-semibold leading-snug text-white">
+        <div className="flex flex-col gap-2 p-3 sm:p-4">
+          <h3 className="text-base font-semibold leading-snug text-white">
             {project.title}
           </h3>
 
@@ -39,7 +39,7 @@ export default function ProjectCard({ project }) {
               <span className="relative z-10">Подробнее</span>
             </button>
 
-            {project.youtubeHref ? (
+            {project.youtubeHref && (
               <a
                 href={project.youtubeHref}
                 target="_blank"
@@ -49,11 +49,6 @@ export default function ProjectCard({ project }) {
                 <Youtube size={13} />
                 YouTube
               </a>
-            ) : (
-              <span className="inline-flex cursor-not-allowed items-center gap-1.5 rounded-lg border border-white/10 px-3 py-2 text-xs font-semibold text-slate-600">
-                <Youtube size={13} />
-                YouTube
-              </span>
             )}
           </div>
         </div>
