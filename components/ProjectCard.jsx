@@ -10,19 +10,42 @@ export default function ProjectCard({ project }) {
   return (
     <>
       <article className="portfolio-card group flex h-full flex-col overflow-hidden rounded-lg border border-white/10 bg-[#111827] transition duration-300 hover:-translate-y-1.5 hover:border-cyan-300/40 hover:bg-[#121d2d] hover:shadow-[0_0_24px_rgba(103,232,249,0.18),0_8px_32px_rgba(0,0,0,0.4)]">
-        <div className="relative aspect-video overflow-hidden bg-[#0B0F17]">
-          <img
-            src={project.image}
-            alt={`Превью проекта: ${project.title}`}
-            className={`h-full w-full transition duration-700 group-hover:scale-[1.04] ${
-              project.imageContain ? "object-contain" : "object-cover"
-            }`}
-            loading="lazy"
-          />
-          <span className="absolute left-3 top-3 rounded-full border border-cyan-300/25 bg-slate-950/65 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.14em] text-cyan-200/95 backdrop-blur-sm">
-            {project.displayCategory ?? project.category}
-          </span>
-        </div>
+        {project.primaryHref ? (
+          <a
+            href={project.primaryHref}
+            target="_blank"
+            rel="noreferrer"
+            className="relative block aspect-video overflow-hidden bg-[#0B0F17]"
+            tabIndex={-1}
+            aria-label={`Открыть сайт проекта ${project.title}`}
+          >
+            <img
+              src={project.image}
+              alt={`Превью проекта: ${project.title}`}
+              className={`h-full w-full transition duration-700 group-hover:scale-[1.04] ${
+                project.imageContain ? "object-contain" : "object-cover"
+              }`}
+              loading="lazy"
+            />
+            <span className="absolute left-3 top-3 rounded-full border border-cyan-300/25 bg-slate-950/65 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.14em] text-cyan-200/95 backdrop-blur-sm">
+              {project.displayCategory ?? project.category}
+            </span>
+          </a>
+        ) : (
+          <div className="relative aspect-video overflow-hidden bg-[#0B0F17]">
+            <img
+              src={project.image}
+              alt={`Превью проекта: ${project.title}`}
+              className={`h-full w-full transition duration-700 group-hover:scale-[1.04] ${
+                project.imageContain ? "object-contain" : "object-cover"
+              }`}
+              loading="lazy"
+            />
+            <span className="absolute left-3 top-3 rounded-full border border-cyan-300/25 bg-slate-950/65 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.14em] text-cyan-200/95 backdrop-blur-sm">
+              {project.displayCategory ?? project.category}
+            </span>
+          </div>
+        )}
 
         <div className="flex flex-col gap-2 p-3 sm:p-4">
           <h3 className="text-base font-semibold leading-snug text-white">
