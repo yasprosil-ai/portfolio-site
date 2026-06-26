@@ -27,7 +27,7 @@ export default function ProjectsSection() {
               Портфолио
             </p>
             <h2 className="text-3xl font-semibold leading-tight text-white md:text-5xl">
-              Портфолио
+              Избранные проекты
             </h2>
             <p className="mt-5 text-base leading-7 text-slate-300">
               Несколько примеров сайтов, ботов и цифровых продуктов, которые я собирал под реальные задачи.

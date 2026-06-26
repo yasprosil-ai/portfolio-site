@@ -221,7 +221,7 @@ export const projects = [
   },
   {
     slug: "print-calculator-bot",
-    title: "Telegram-бот для мастерской StrigaPrint",
+    title: "Telegram-бот StrigaPrint",
     category: "Telegram-боты",
 
     description:
