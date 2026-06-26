@@ -20,11 +20,12 @@ export default function Hero() {
       <div className="mx-auto grid min-h-[calc(96dvh-5rem)] w-full max-w-7xl grid-cols-1 items-center gap-12 px-4 py-10 sm:px-6 lg:grid-cols-[minmax(0,1.12fr)_minmax(0,0.88fr)] lg:px-8 lg:py-14">
         <div className="min-w-0 max-w-full lg:max-w-4xl">
           <p
-            className="hero-reveal mb-6 inline-flex items-center gap-2 rounded-lg border border-amber-300/30 bg-amber-300/10 px-3 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-amber-100 shadow-[0_0_30px_rgba(245,158,11,0.16)]"
+            className="hero-reveal relative mb-6 inline-flex items-center gap-2 overflow-hidden rounded-lg border border-amber-300/30 bg-amber-300/10 px-3 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-amber-100 shadow-[0_0_30px_rgba(245,158,11,0.16)]"
             style={{ "--hero-delay": "60ms" }}
           >
-            <span className="size-2 rounded-full bg-amber-300 shadow-[0_0_18px_rgba(251,191,36,0.9)]" />
-            От идеи до первой версии
+            <span className="hero-badge-glow" aria-hidden="true" />
+            <span className="relative size-2 rounded-full bg-amber-300 shadow-[0_0_18px_rgba(251,191,36,0.9)]" />
+            <span className="relative">От идеи до первой версии</span>
           </p>
           <h1
             className="hero-reveal w-full max-w-full break-words text-[2rem] font-bold leading-[1.08] tracking-tight text-white sm:text-5xl lg:max-w-[48rem] lg:text-[3.65rem]"
