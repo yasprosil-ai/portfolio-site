@@ -92,13 +92,16 @@ export default function Hero() {
               <div className="rounded-lg border border-cyan-300/18 bg-cyan-300/6 p-4">
                 <div className="mb-4 flex items-center justify-between text-xs text-slate-400">
                   <span>/проект</span>
-                  <span>прототип готов</span>
+                  <span className="hero-status-final inline-flex items-center gap-2">
+                    <span className="hero-status-dot" aria-hidden="true" />
+                    прототип готов
+                  </span>
                 </div>
                 <div className="min-w-0 space-y-3 font-mono text-sm">
-                  <FlowLine label="идея" value="сырой бриф" />
-                  <FlowLine label="промпт" value="структура и UX" />
-                  <FlowLine label="прототип" value="сайт, бот или mini app" />
-                  <FlowLine label="запуск" value="первая рабочая версия" active />
+                  <FlowLine label="идея" value="сырой бриф" labelDelay="680ms" valueDelay="830ms" />
+                  <FlowLine label="промпт" value="структура и UX" labelDelay="980ms" valueDelay="1130ms" />
+                  <FlowLine label="прототип" value="сайт, бот или mini app" labelDelay="1280ms" valueDelay="1430ms" />
+                  <FlowLine label="запуск" value="первая рабочая версия" active labelDelay="1580ms" valueDelay="1730ms" />
                 </div>
               </div>
 
@@ -126,11 +129,21 @@ export default function Hero() {
   );
 }
 
-function FlowLine({ label, value, active = false }) {
+function FlowLine({ label, value, active = false, labelDelay, valueDelay }) {
   return (
     <div className="grid min-w-0 gap-2 sm:grid-cols-[6.5rem_1fr] sm:items-center sm:gap-3">
-      <span className={active ? "text-cyan-200" : "text-slate-500"}>{label}</span>
-      <span className="min-w-0 rounded-lg border border-white/10 bg-[#0B0F17] px-3 py-2 text-slate-200">{value}</span>
+      <span
+        className={`hero-step-label ${active ? "text-cyan-200" : "text-slate-500"}`}
+        style={{ "--step-delay": labelDelay }}
+      >
+        {label}
+      </span>
+      <span
+        className="hero-step-value min-w-0 rounded-lg border border-white/10 bg-[#0B0F17] px-3 py-2 text-slate-200"
+        style={{ "--step-delay": valueDelay }}
+      >
+        {value}
+      </span>
     </div>
   );
 }
