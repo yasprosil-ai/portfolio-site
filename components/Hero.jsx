@@ -12,11 +12,17 @@ export default function Hero() {
 
       <div className="mx-auto grid min-h-[calc(96dvh-5rem)] w-full max-w-7xl grid-cols-1 items-center gap-12 px-4 py-10 sm:px-6 lg:grid-cols-[minmax(0,1.12fr)_minmax(0,0.88fr)] lg:px-8 lg:py-14">
         <div className="min-w-0 max-w-full lg:max-w-4xl">
-          <p className="mb-6 inline-flex items-center gap-2 rounded-lg border border-amber-300/30 bg-amber-300/10 px-3 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-amber-100 shadow-[0_0_30px_rgba(245,158,11,0.16)]">
+          <p
+            className="hero-reveal mb-6 inline-flex items-center gap-2 rounded-lg border border-amber-300/30 bg-amber-300/10 px-3 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-amber-100 shadow-[0_0_30px_rgba(245,158,11,0.16)]"
+            style={{ "--hero-delay": "60ms" }}
+          >
             <span className="size-2 rounded-full bg-amber-300 shadow-[0_0_18px_rgba(251,191,36,0.9)]" />
             Я спросил у ИИ
           </p>
-          <h1 className="w-full max-w-full break-words text-[2rem] font-bold leading-[1.08] tracking-tight text-white sm:text-5xl lg:max-w-[48rem] lg:text-[3.65rem]">
+          <h1
+            className="hero-reveal w-full max-w-full break-words text-[2rem] font-bold leading-[1.08] tracking-tight text-white sm:text-5xl lg:max-w-[48rem] lg:text-[3.65rem]"
+            style={{ "--hero-delay": "150ms" }}
+          >
             Создаю сайты,{" "}
             <span className="bg-gradient-to-r from-amber-300 via-amber-200 to-indigo-500 bg-clip-text text-transparent">
               Telegram-ботов
@@ -24,25 +30,28 @@ export default function Hero() {
             <br />
             и AI-автоматизации для бизнеса
           </h1>
-          <p className="mt-6 max-w-2xl text-xs font-semibold uppercase tracking-[0.16em] text-slate-400 sm:text-sm">
+          <p
+            className="hero-reveal mt-6 max-w-2xl text-xs font-semibold uppercase tracking-[0.16em] text-slate-400 sm:text-sm"
+            style={{ "--hero-delay": "240ms" }}
+          >
             Быстро собираю рабочие цифровые продукты от идеи и сырого брифа до первой понятной версии.
           </p>
 
-          <div className="mt-9 flex flex-col gap-3 sm:flex-row">
+          <div className="hero-reveal mt-9 flex flex-col gap-3 sm:flex-row" style={{ "--hero-delay": "330ms" }}>
             <BriefModalTrigger
               label="Обсудить проект"
-              className="inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-amber-300 via-amber-200 to-indigo-500 px-6 text-sm font-semibold text-slate-950 shadow-[0_18px_52px_rgba(79,70,229,0.28)] transition hover:brightness-110 active:translate-y-px sm:w-auto"
+              className="hero-primary-button inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-amber-300 via-amber-200 to-indigo-500 px-6 text-sm font-semibold text-slate-950 shadow-[0_18px_52px_rgba(79,70,229,0.28)] sm:w-auto"
             />
             <a
               href="#projects"
-              className="inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-lg border border-white/14 px-6 text-sm font-semibold text-white transition hover:border-white/30 hover:bg-white/6 active:translate-y-px sm:w-auto"
+              className="hero-secondary-button inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-lg border border-white/14 px-6 text-sm font-semibold text-white sm:w-auto"
             >
               Смотреть портфолио
-              <ArrowDownRight size={18} />
+              <ArrowDownRight size={18} className="hero-secondary-arrow" />
             </a>
           </div>
 
-          <div className="mt-8 flex max-w-full flex-wrap gap-2 text-sm text-slate-300">
+          <div className="hero-reveal mt-8 flex max-w-full flex-wrap gap-2 text-sm text-slate-300" style={{ "--hero-delay": "420ms" }}>
             {[
               ["Сайты", "/services/websites"],
               ["Telegram-боты", "/services/telegram-bots"],
@@ -54,7 +63,7 @@ export default function Hero() {
               <a
                 key={item}
                 href={href}
-                className="rounded-lg border border-white/10 bg-white/[0.03] px-3 py-2 transition hover:border-white/22 hover:bg-white/[0.07] hover:text-white active:scale-95"
+                className="hero-pill rounded-lg border border-white/10 bg-white/[0.03] px-3 py-2"
               >
                 {item}
               </a>
@@ -62,9 +71,12 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="relative mx-auto w-full min-w-0 max-w-full sm:max-w-[32rem] lg:ml-auto">
-          <div className="absolute -inset-5 rounded-[8px] bg-indigo-500/20 blur-3xl" />
-          <div className="relative overflow-hidden rounded-lg border border-indigo-300/28 bg-[#10172A]/88 shadow-2xl shadow-black/40 backdrop-blur-xl">
+        <div
+          className="hero-reveal relative mx-auto w-full min-w-0 max-w-full sm:max-w-[32rem] lg:ml-auto"
+          style={{ "--hero-delay": "520ms" }}
+        >
+          <div className="hero-visual-glow absolute -inset-5 rounded-[8px] bg-indigo-500/20 blur-3xl" />
+          <div className="hero-visual-card relative overflow-hidden rounded-lg border border-indigo-300/28 bg-[#10172A]/88 shadow-2xl shadow-black/40 backdrop-blur-xl">
             <div className="flex items-center justify-between border-b border-white/10 px-4 py-3">
               <div className="flex items-center gap-2 text-sm font-medium text-white">
                 <TerminalSquare size={18} className="text-cyan-300" />
@@ -80,7 +92,10 @@ export default function Hero() {
               <div className="rounded-lg border border-cyan-300/18 bg-cyan-300/6 p-4">
                 <div className="mb-4 flex items-center justify-between text-xs text-slate-400">
                   <span>/проект</span>
-                  <span>прототип готов</span>
+                  <span className="inline-flex items-center gap-2">
+                    <span className="hero-status-dot" aria-hidden="true" />
+                    прототип готов
+                  </span>
                 </div>
                 <div className="min-w-0 space-y-3 font-mono text-sm">
                   <FlowLine label="идея" value="сырой бриф" />
@@ -96,8 +111,12 @@ export default function Hero() {
                   ["Telegram-бот", "сценарии, заявки, уведомления"],
                   ["AI-интеграции", "ответы, заявки и рутина"],
                   ["MVP", "быстрый запуск идеи"],
-                ].map(([title, text]) => (
-                  <div key={title} className="rounded-lg border border-white/10 bg-white/[0.035] p-4">
+                ].map(([title, text], index) => (
+                  <div
+                    key={title}
+                    className="hero-mini-card rounded-lg border border-white/10 bg-white/[0.035] p-4"
+                    style={{ "--card-delay": `${620 + index * 80}ms` }}
+                  >
                     <div className="mb-3 flex items-center gap-2 text-sm font-semibold text-white">
                       <CheckCircle2 size={16} className="text-emerald-300" />
                       {title}
