@@ -5,9 +5,11 @@ import Footer from "../../../components/Footer.jsx";
 import { services } from "../../../data/services.js";
 
 export function generateStaticParams() {
-  // У «Сайтов» отдельная статическая страница /services/websites со своей структурой,
-  // поэтому исключаем её из динамического роута, чтобы не было конфликта путей.
-  return services.filter((s) => s.slug !== "websites").map((s) => ({ slug: s.slug }));
+  // «Сайты» и «Telegram-боты» имеют отдельные статические страницы со своей структурой,
+  // поэтому исключаем их из динамического роута, чтобы не было конфликта путей.
+  return services
+    .filter((s) => s.slug !== "websites" && s.slug !== "telegram-bots")
+    .map((s) => ({ slug: s.slug }));
 }
 
 export async function generateMetadata({ params }) {
