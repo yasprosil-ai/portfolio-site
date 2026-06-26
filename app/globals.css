@@ -368,7 +368,8 @@ section[id] {
   pointer-events: none;
 }
 
-.service-card:hover .service-btn-glow {
+.service-card:hover .service-btn-glow,
+.portfolio-card:hover .service-btn-glow {
   animation: icon-pulse-glow 2s ease-in-out infinite;
 }
 

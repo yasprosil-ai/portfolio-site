@@ -9,7 +9,7 @@ export default function ProjectCard({ project }) {
 
   return (
     <>
-      <article className="group flex h-full flex-col overflow-hidden rounded-lg border border-white/10 bg-[#111827] transition duration-300 hover:-translate-y-1.5 hover:border-cyan-300/40 hover:bg-[#121d2d] hover:shadow-[0_0_24px_rgba(103,232,249,0.18),0_8px_32px_rgba(0,0,0,0.4)]">
+      <article className="portfolio-card group flex h-full flex-col overflow-hidden rounded-lg border border-white/10 bg-[#111827] transition duration-300 hover:-translate-y-1.5 hover:border-cyan-300/40 hover:bg-[#121d2d] hover:shadow-[0_0_24px_rgba(103,232,249,0.18),0_8px_32px_rgba(0,0,0,0.4)]">
         <div className="relative aspect-video overflow-hidden bg-[#0B0F17]">
           <img
             src={project.image}
