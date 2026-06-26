@@ -5,13 +5,14 @@ import {
   LayoutTemplate,
 } from "lucide-react";
 
-export const projectCategories = ["Сайты", "Лендинги", "Сайт-визитки", "Telegram-боты", "Мини-аппы", "MVP"];
+export const projectCategories = ["Сайты", "Telegram-боты", "AI-интеграции", "Telegram Mini Apps", "MVP", "Доработка и поддержка"];
 
 export const projects = [
   {
     slug: "margolash-website",
     title: "MargoLash",
     category: "Сайты",
+    displayCategory: "Сайт",
 
     description:
       "Студия работала только через Instagram — без полного прайса и удобной записи. Сайт закрыл это: услуги с ценами, портфолио работ, отзывы и форма записи в одном месте. Скрытая панель позволяет менять отзывы без разработчика.",
@@ -59,7 +60,8 @@ export const projects = [
   {
     slug: "portfolio-landing",
     title: "Портфолио Я спросил у ИИ",
-    category: "Лендинги",
+    category: "Сайты",
+    displayCategory: "Лендинг",
 
     description:
       "Один лендинг заменяет долгие объяснения «чем занимаюсь»: клиент за 30 секунд видит оффер, проекты и следующий шаг. Это сайт, на котором вы сейчас, — живой пример такого лендинга.",
@@ -99,7 +101,8 @@ export const projects = [
   {
     slug: "remkvartira-landing",
     title: "РемКвартира",
-    category: "Лендинги",
+    category: "Сайты",
+    displayCategory: "Лендинг",
 
     description:
       "Клиент боится отдать крупную сумму незнакомым людям и потерять контроль. Лендинг снимает каждый страх: фиксированная смета, калькулятор стоимости, фото до/после и DM-подтверждение от бота, что заявка принята.",
@@ -140,7 +143,8 @@ export const projects = [
   {
     slug: "dental-implant-landing",
     title: "Дентал Прайм",
-    category: "Лендинги",
+    category: "Сайты",
+    displayCategory: "Лендинг",
 
     description:
       "Дорогая медицинская услуга продаётся доверием, не давлением. Лендинг снижает тревогу пациента: объясняет этапы лечения, показывает врачей, пакеты с ценами и записывает на консультацию без агрессивных CTA.",
@@ -181,7 +185,8 @@ export const projects = [
   {
     slug: "legal-services-landing",
     title: "Правовой центр",
-    category: "Лендинги",
+    category: "Сайты",
+    displayCategory: "Лендинг",
 
     description:
       "Человек с долгами боится и не знает, что делать. Лендинг объясняет процедуру банкротства простым языком, снимает страхи через кейсы и ведёт к бесплатной консультации без давления.",
@@ -223,6 +228,7 @@ export const projects = [
     slug: "print-calculator-bot",
     title: "Telegram-бот StrigaPrint",
     category: "Telegram-боты",
+    displayCategory: "Telegram-бот",
 
     description:
       "Мастерская тратила время на ручной приём заказов в личку — заявки терялись, менеджер уставал. Бот автоматизирует приём заказов, расчёт стоимости и ведёт сделку по статусам 24/7.",

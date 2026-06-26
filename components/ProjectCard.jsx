@@ -20,7 +20,7 @@ export default function ProjectCard({ project }) {
             loading="lazy"
           />
           <span className="absolute left-3 top-3 rounded-full border border-cyan-300/25 bg-slate-950/65 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.14em] text-cyan-200/95 backdrop-blur-sm">
-            {project.category}
+            {project.displayCategory ?? project.category}
           </span>
         </div>
 
