@@ -4,8 +4,8 @@ import { notFound } from "next/navigation";
 import Header from "../../../../components/Header.jsx";
 import Footer from "../../../../components/Footer.jsx";
 import Breadcrumbs from "../../../../components/Breadcrumbs.jsx";
+import { BriefModalTrigger } from "../../../../components/BriefModal.jsx";
 import { getWebsiteType, websiteTypes, workSteps } from "../../../../data/website-types.js";
-import { contacts } from "../../../../data/skills.js";
 
 export function generateStaticParams() {
   return websiteTypes.map((type) => ({ type: type.slug }));
@@ -59,14 +59,7 @@ export default async function WebsiteTypePage({ params }) {
             <p className="max-w-2xl text-base leading-7 text-slate-300">{type.intro}</p>
 
             <div className="flex flex-wrap items-center gap-3">
-              <a
-                href={contacts.telegram}
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex min-h-12 items-center justify-center rounded-lg bg-white px-5 text-sm font-semibold text-slate-950 transition hover:bg-cyan-200 active:translate-y-px"
-              >
-                Обсудить проект
-              </a>
+              <BriefModalTrigger label="Обсудить проект" />
               <span className="inline-flex min-h-12 items-center gap-2 rounded-lg border border-white/12 px-5 text-sm font-semibold text-slate-200">
                 <Clock size={16} className="text-cyan-300" />
                 Срок: {type.deadline}
@@ -127,14 +120,7 @@ export default async function WebsiteTypePage({ params }) {
             <p className="max-w-lg text-base leading-7 text-slate-300">
               Напишите, какую задачу нужно решить и что важно показать клиентам. Я помогу с форматом, предложу структуру и подскажу, какое решение лучше подойдёт под вашу задачу.
             </p>
-            <a
-              href={contacts.telegram}
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex min-h-12 items-center justify-center rounded-lg bg-white px-6 text-sm font-semibold text-slate-950 transition hover:bg-cyan-200 active:translate-y-px"
-            >
-              Обсудить проект
-            </a>
+            <BriefModalTrigger label="Обсудить проект" />
           </section>
 
           {/* Назад к видам сайтов */}

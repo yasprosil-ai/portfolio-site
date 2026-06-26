@@ -4,8 +4,9 @@ import Header from "../../../components/Header.jsx";
 import Footer from "../../../components/Footer.jsx";
 import Breadcrumbs from "../../../components/Breadcrumbs.jsx";
 import WebsiteTypeCard from "../../../components/WebsiteTypeCard.jsx";
+import { BriefModalTrigger } from "../../../components/BriefModal.jsx";
 import { websiteTypes, websiteChoiceGuide } from "../../../data/website-types.js";
-import { contacts } from "../../../data/skills.js";
+
 
 export const metadata = {
   title: "Разработка сайтов под ключ — лендинги, сайты-визитки, каталоги и интернет-магазины",
@@ -49,14 +50,7 @@ export default function WebsitesPage() {
             </div>
 
             <div className="flex flex-wrap gap-3">
-              <a
-                href={contacts.telegram}
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex min-h-12 items-center justify-center rounded-lg bg-white px-5 text-sm font-semibold text-slate-950 transition hover:bg-cyan-200 active:translate-y-px"
-              >
-                Обсудить сайт
-              </a>
+              <BriefModalTrigger label="Обсудить сайт" />
               <a
                 href="#site-types"
                 className="inline-flex min-h-12 items-center justify-center rounded-lg border border-cyan-300/24 px-5 text-sm font-semibold text-cyan-100 transition hover:bg-cyan-300/10 active:translate-y-px"
@@ -115,14 +109,7 @@ export default function WebsitesPage() {
             <p className="max-w-lg text-base leading-7 text-slate-300">
               Напишите, что вы хотите запустить: услугу, портфолио, каталог, интернет-магазин или новую идею. Я помогу выбрать подходящий формат сайта и предложу структуру под вашу задачу.
             </p>
-            <a
-              href={contacts.telegram}
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex min-h-12 items-center justify-center rounded-lg bg-white px-6 text-sm font-semibold text-slate-950 transition hover:bg-cyan-200 active:translate-y-px"
-            >
-              Обсудить сайт
-            </a>
+            <BriefModalTrigger label="Обсудить сайт" />
           </section>
           <Link
             href="/#services"
