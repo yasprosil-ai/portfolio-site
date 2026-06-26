@@ -5,7 +5,9 @@ import Footer from "../../../components/Footer.jsx";
 import { services } from "../../../data/services.js";
 
 export function generateStaticParams() {
-  return services.map((s) => ({ slug: s.slug }));
+  // У «Сайтов» отдельная статическая страница /services/websites со своей структурой,
+  // поэтому исключаем её из динамического роута, чтобы не было конфликта путей.
+  return services.filter((s) => s.slug !== "websites").map((s) => ({ slug: s.slug }));
 }
 
 export async function generateMetadata({ params }) {

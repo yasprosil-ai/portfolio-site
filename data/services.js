@@ -2,7 +2,7 @@ import { Blocks, Bot, BrainCircuit, Globe, Rocket, Wrench } from "lucide-react";
 
 export const services = [
   {
-    slug: "sites",
+    slug: "websites",
     title: "Сайты",
     icon: Globe,
     text: "Сайты для услуг, экспертов, студий, малого бизнеса и теста новых идей.",
