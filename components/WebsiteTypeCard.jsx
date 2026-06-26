@@ -1,4 +1,4 @@
-import { ArrowRight, Check } from "lucide-react";
+import { Check } from "lucide-react";
 import Link from "next/link";
 
 // Карточка разновидности сайта на странице категории «Сайты».
@@ -33,10 +33,14 @@ export default function WebsiteTypeCard({ type }) {
         ))}
       </ul>
 
-      <div className="mt-4 flex items-center justify-end border-t border-white/8 pt-4">
-        <span className="inline-flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-[0.18em] text-amber-100 transition group-hover:gap-2.5">
-          Подробнее
-          <ArrowRight size={14} />
+      <div className="mt-4 flex items-center justify-between gap-4 border-t border-white/8 pt-4">
+        <div>
+          <p className="text-[10px] font-semibold uppercase tracking-[0.14em] text-slate-500">Срок</p>
+          <p className="mt-0.5 text-sm font-semibold text-white">{type.deadline}</p>
+        </div>
+        <span className="relative overflow-hidden rounded-lg border border-amber-300/30 bg-amber-300/10 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.18em] text-amber-100 transition hover:bg-amber-300/18 active:translate-y-px">
+          <span className="service-btn-glow" />
+          <span className="relative z-10">Подробнее</span>
         </span>
       </div>
     </Link>
