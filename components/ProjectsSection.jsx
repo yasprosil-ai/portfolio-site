@@ -8,10 +8,10 @@ import { projectCategories, projects } from "../data/projects.js";
 
 const featuredCategoryOrder = {
   Лендинги: [
-    "remkvartira-landing",
-    "dental-implant-landing",
-    "legal-services-landing",
     "portfolio-landing",
+    "remkvartira-landing",
+    "legal-services-landing",
+    "dental-implant-landing",
   ],
   "Telegram-боты": [
     "print-calculator-bot",
