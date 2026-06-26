@@ -51,10 +51,12 @@ export default function Hero() {
             />
             <a
               href="#projects"
-              className="inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-lg border border-white/14 px-6 text-sm font-semibold text-white transition hover:border-white/30 hover:bg-white/6 active:translate-y-px sm:w-auto"
+              className="group inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-lg border border-white/14 px-6 text-sm font-semibold text-white transition hover:border-white/30 hover:bg-white/6 hover:shadow-[0_0_22px_rgba(148,163,184,0.12)] active:translate-y-px sm:w-auto"
             >
               Смотреть портфолио
-              <ArrowDownRight size={18} />
+              <span className="transition-transform duration-200 group-hover:translate-x-0.5">
+                <ArrowDownRight size={18} />
+              </span>
             </a>
           </div>
 
@@ -70,7 +72,7 @@ export default function Hero() {
               <a
                 key={item}
                 href={href}
-                className="rounded-lg border border-white/10 bg-white/[0.03] px-3 py-2 transition hover:border-white/22 hover:bg-white/[0.07] hover:text-white active:scale-95"
+                className="rounded-lg border border-white/10 bg-white/[0.03] px-3 py-2 transition hover:border-teal-300/[0.25] hover:bg-white/[0.07] hover:text-white hover:shadow-[0_0_14px_rgba(94,234,212,0.07)] active:scale-95"
               >
                 {item}
               </a>
@@ -121,7 +123,7 @@ export default function Hero() {
                 {MODULE_CARDS.map(({ title, text, delay }) => (
                   <div
                     key={title}
-                    className="hero-module-card rounded-lg border border-white/10 bg-white/[0.035] p-4 transition-[border-color,background-color] duration-200 hover:border-white/[0.18] hover:bg-white/[0.055]"
+                    className="hero-module-card rounded-lg border border-white/10 bg-white/[0.035] p-4 transition-[border-color,background-color,box-shadow,transform] duration-200 hover:-translate-y-px hover:border-teal-300/[0.32] hover:bg-white/[0.055] hover:shadow-[0_0_24px_rgba(94,234,212,0.11)]"
                     style={{ "--card-delay": delay }}
                   >
                     <div className="mb-3 flex items-center gap-2 text-sm font-semibold text-white">
