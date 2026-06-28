@@ -1,5 +1,6 @@
 "use client";
 
+import { Globe, Youtube } from "lucide-react";
 import { useState } from "react";
 import ProjectDetails from "./ProjectDetails.jsx";
 
@@ -60,6 +61,30 @@ export default function ProjectCard({ project }) {
               <span className="service-btn-glow" />
               <span className="relative z-10">Смотреть кейс</span>
             </button>
+
+            {project.primaryHref && (
+              <a
+                href={project.primaryHref}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-1.5 rounded-lg border border-white/16 bg-white/6 px-3 py-2 text-xs font-semibold text-white transition hover:border-white/30 hover:bg-white/10 active:translate-y-px"
+              >
+                <Globe size={13} />
+                Открыть
+              </a>
+            )}
+
+            {project.youtubeHref && (
+              <a
+                href={project.youtubeHref}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-1.5 rounded-lg bg-[#FF0000] px-3 py-2 text-xs font-semibold text-white transition hover:bg-[#CC0000] active:translate-y-px"
+              >
+                <Youtube size={13} />
+                YouTube
+              </a>
+            )}
           </div>
         </div>
       </article>
