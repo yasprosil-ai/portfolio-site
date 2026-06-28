@@ -6,7 +6,17 @@ import { contacts } from "../data/skills.js";
 
 export default function ProjectDetails({ project, onClose }) {
   const openHref = project.primaryHref ?? project.youtubeHref;
-  const summary = project.caseStudy?.summary ?? project.cardSummary ?? project.description;
+  const modalTitle = project.caseStudy?.title ?? project.title;
+  const summary =
+    project.caseStudy?.subtitle ??
+    project.caseStudy?.summary ??
+    project.cardSummary ??
+    project.description;
+  const ctaTitle = project.caseStudy?.ctaTitle;
+  const ctaText = project.caseStudy?.ctaText;
+  const primaryButtonLabel = project.caseStudy?.primaryButton ?? "Открыть проект";
+  const secondaryButtonLabel =
+    project.caseStudy?.secondaryButton ?? "Хочу похожий проект";
   const sections = [
     { heading: "Задача", text: project.caseStudy?.task },
     { heading: "Что сделано", text: project.caseStudy?.done },
@@ -36,11 +46,12 @@ export default function ProjectDetails({ project, onClose }) {
       />
 
       <div className="relative z-10 flex max-h-[90dvh] w-full max-w-2xl flex-col overflow-hidden rounded-t-[24px] border border-white/10 bg-[#0F1628] shadow-[0_24px_80px_rgba(0,0,0,0.5)] sm:rounded-[24px]">
-        {/* Шапка */}
         <div className="flex shrink-0 items-start justify-between gap-4 border-b border-white/10 p-5 sm:p-6">
           <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-cyan-300">Кейс</p>
-            <h2 className="mt-1 text-xl font-semibold text-white">{project.title}</h2>
+            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-cyan-300">
+              Кейс
+            </p>
+            <h2 className="mt-1 text-xl font-semibold text-white">{modalTitle}</h2>
             <p className="mt-3 max-w-xl text-sm leading-6 text-slate-300">{summary}</p>
           </div>
           <button
@@ -53,7 +64,6 @@ export default function ProjectDetails({ project, onClose }) {
           </button>
         </div>
 
-        {/* Контент */}
         <div className="overflow-y-auto p-5 sm:p-6">
           <div className="grid gap-6">
             {sections.map((section) => (
@@ -68,6 +78,19 @@ export default function ProjectDetails({ project, onClose }) {
             ))}
           </div>
 
+          {(ctaTitle || ctaText) && (
+            <div className="mt-8 rounded-2xl border border-white/10 bg-white/[0.03] p-5">
+              {ctaTitle ? (
+                <p className="text-base font-semibold text-white">{ctaTitle}</p>
+              ) : null}
+              {ctaText ? (
+                <p className="mt-2 max-w-2xl text-sm leading-7 text-slate-300">
+                  {ctaText}
+                </p>
+              ) : null}
+            </div>
+          )}
+
           <div className="mt-8 flex flex-wrap gap-3">
             {openHref ? (
               <a
@@ -76,7 +99,7 @@ export default function ProjectDetails({ project, onClose }) {
                 rel="noreferrer"
                 className="inline-flex min-h-11 items-center gap-2 rounded-lg bg-white px-5 text-sm font-semibold text-slate-950 transition hover:bg-cyan-200 active:translate-y-px"
               >
-                Открыть проект
+                {primaryButtonLabel}
                 <ArrowRight size={15} />
               </a>
             ) : null}
@@ -86,7 +109,7 @@ export default function ProjectDetails({ project, onClose }) {
               rel="noreferrer"
               className="inline-flex min-h-11 items-center gap-2 rounded-lg border border-cyan-300/24 px-5 text-sm font-semibold text-cyan-100 transition hover:bg-cyan-300/10 active:translate-y-px"
             >
-              Хочу похожий проект
+              {secondaryButtonLabel}
               <ArrowRight size={15} />
             </a>
           </div>
