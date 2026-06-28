@@ -48,10 +48,7 @@ export default function ProjectDetails({ project, onClose }) {
       <div className="relative z-10 flex max-h-[90dvh] w-full max-w-2xl flex-col overflow-hidden rounded-t-[24px] border border-white/10 bg-[#0F1628] shadow-[0_24px_80px_rgba(0,0,0,0.5)] sm:rounded-[24px]">
         <div className="flex shrink-0 items-start justify-between gap-4 border-b border-white/10 p-5 sm:p-6">
           <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-cyan-300">
-              Кейс
-            </p>
-            <h2 className="mt-1 text-xl font-semibold text-white">{modalTitle}</h2>
+            <h2 className="text-xl font-semibold text-white">{modalTitle}</h2>
             <p className="mt-3 max-w-xl text-sm leading-6 text-slate-300">{summary}</p>
           </div>
           <button
