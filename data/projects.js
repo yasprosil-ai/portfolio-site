@@ -10,7 +10,7 @@ export const projectCategories = ["Сайты", "Telegram-боты", "AI-инт�
 export const projects = [
   {
     slug: "margolash-website",
-    title: "MargoLash",
+    title: "Сайт для записи на услуги",
     category: "Сайты",
     displayCategory: "Сайт",
     cardSummary: "Сайт для записи на услуги",
