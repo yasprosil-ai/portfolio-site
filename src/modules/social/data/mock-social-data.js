@@ -1,0 +1,170 @@
+export const platforms = [
+  {
+    id: "threads",
+    name: "Threads",
+    shortDescription: "Короткие текстовые посты, первые комментарии и быстрые реплаи.",
+    status: "mock",
+  },
+  {
+    id: "instagram",
+    name: "Instagram",
+    shortDescription: "Подписи, публикации по слотам и работа с комментариями.",
+    status: "mock",
+  },
+  {
+    id: "tiktok",
+    name: "TikTok",
+    shortDescription: "Сценарии коротких роликов, подписи и очередь публикаций.",
+    status: "mock",
+  },
+  {
+    id: "youtube",
+    name: "YouTube",
+    shortDescription: "Заголовки, описания, публикации и ответы на комментарии.",
+    status: "mock",
+  },
+];
+
+export const posts = [
+  {
+    id: "th-1",
+    platform: "threads",
+    title: "Почему AI-контенту нужен редактор",
+    body: "Короткий тред о том, почему черновик от ИИ почти всегда выигрывает после ручной редакции и контекстной правки.",
+    firstComment: "Могу показать, как это работает на реальном кейсе.",
+    status: "draft",
+    scheduledAt: "2026-06-29T10:00:00+03:00",
+    publishedAt: null,
+  },
+  {
+    id: "th-2",
+    platform: "threads",
+    title: "Как упаковать услугу в 5 экранов",
+    body: "Шаблон структуры для лендинга, который помогает быстрее прийти к понятной первой версии.",
+    firstComment: "Если хочешь, разберу структуру под твою нишу.",
+    status: "scheduled",
+    scheduledAt: "2026-06-30T12:30:00+03:00",
+    publishedAt: null,
+  },
+  {
+    id: "ig-1",
+    platform: "instagram",
+    title: "Карусель про Telegram-ботов",
+    body: "Серия карточек о том, когда бизнесу нужен бот, а когда лучше начать с сайта или квиза.",
+    firstComment: "Напиши в директ, если хочешь похожий сценарий под свою задачу.",
+    status: "scheduled",
+    scheduledAt: "2026-06-29T18:00:00+03:00",
+    publishedAt: null,
+  },
+  {
+    id: "ig-2",
+    platform: "instagram",
+    title: "Рилс про быстрый MVP",
+    body: "Короткий ролик о том, как запускать первую версию сервиса без лишней архитектурной тяжести.",
+    firstComment: "Собрать MVP можно быстрее, если сразу урезать сценарий до одного главного действия.",
+    status: "published",
+    scheduledAt: null,
+    publishedAt: "2026-06-27T14:15:00+03:00",
+  },
+  {
+    id: "tt-1",
+    platform: "tiktok",
+    title: "TikTok: из идеи в сценарий за вечер",
+    body: "Черновик сценария с хуком, разворотом и CTA для ролика про AI-автоматизацию.",
+    firstComment: "Могу собрать такой же сценарий под любую экспертную нишу.",
+    status: "draft",
+    scheduledAt: null,
+    publishedAt: null,
+  },
+  {
+    id: "yt-1",
+    platform: "youtube",
+    title: "Обзор лендинга для стоматологии",
+    body: "План публикации на YouTube: заголовок, описание, таймкоды и комментарий под вовлечение.",
+    firstComment: "Если нужен разбор твоего проекта, можно сделать отдельный выпуск.",
+    status: "published",
+    scheduledAt: null,
+    publishedAt: "2026-06-25T19:00:00+03:00",
+  },
+  {
+    id: "yt-2",
+    platform: "youtube",
+    title: "Что должен уметь Social Pilot",
+    body: "Черновик ролика про будущий модуль: очередь публикаций, AI-ответы и unified inbox.",
+    firstComment: "Пока это mock-режим, но уже видно будущую механику.",
+    status: "failed",
+    scheduledAt: "2026-06-28T09:00:00+03:00",
+    publishedAt: null,
+  },
+];
+
+export const comments = [
+  {
+    id: "comment-1",
+    platform: "threads",
+    author: "alex.marketer",
+    text: "А можно такую же очередь публикаций потом подключить к реальным API?",
+    relatedPostId: "th-2",
+    sentiment: "curious",
+    status: "needs-reply",
+    aiReply:
+      "Да, этот scaffold как раз закладывает структуру под реальное подключение. Сейчас UI работает на mock-данных, а дальше можно подцепить API платформ.",
+  },
+  {
+    id: "comment-2",
+    platform: "instagram",
+    author: "studio.nails",
+    text: "Интересно, а пост можно сразу адаптировать под Reels и Stories?",
+    relatedPostId: "ig-1",
+    sentiment: "positive",
+    status: "draft-ready",
+    aiReply:
+      "Да, можно развести один смысл на несколько форматов: подпись, рилс-хук и короткие сторис с CTA.",
+  },
+  {
+    id: "comment-3",
+    platform: "tiktok",
+    author: "product.launcher",
+    text: "Покажешь пример TikTok-сценария для MVP?",
+    relatedPostId: "tt-1",
+    sentiment: "curious",
+    status: "needs-reply",
+    aiReply:
+      "Да, можно собрать сценарий под MVP с быстрым оффером, демонстрацией и понятным призывом в конце.",
+  },
+  {
+    id: "comment-4",
+    platform: "youtube",
+    author: "web.case.viewer",
+    text: "Можно потом добавить автоподбор ответа на комментарии по тону бренда?",
+    relatedPostId: "yt-1",
+    sentiment: "positive",
+    status: "approved",
+    aiReply:
+      "Да, это хороший следующий шаг: брендовый тон, шаблоны ответов и фильтры по типу комментария.",
+  },
+];
+
+export const replyDrafts = [
+  {
+    id: "reply-1",
+    platform: "threads",
+    commentId: "comment-1",
+    tone: "спокойный экспертный",
+    text: "Да, в этом и смысл scaffold-подхода: сейчас всё на mock-данных, а дальше можно подключить реальные API без перестройки интерфейса с нуля.",
+  },
+  {
+    id: "reply-2",
+    platform: "instagram",
+    commentId: "comment-2",
+    tone: "дружелюбный",
+    text: "Да, один контент легко разложить на несколько форматов. Можно сделать карусель, рилс и сторис из одной идеи.",
+  },
+  {
+    id: "reply-3",
+    platform: "youtube",
+    commentId: "comment-4",
+    tone: "уверенный",
+    text: "Да, дальше сюда хорошо ляжет AI-слой с подсказкой ответа по тону бренда и типу вопроса.",
+  },
+];
