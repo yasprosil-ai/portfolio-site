@@ -14,6 +14,8 @@ export default function PlatformPage({ platformKey }) {
     notFound();
   }
 
+  const isThreads = platform.id === "threads";
+
   return (
     <div className="mx-auto flex max-w-7xl flex-col gap-6">
       <section className={`rounded-[28px] border border-white/10 bg-gradient-to-br ${platform.accentClass} p-[1px]`}>
@@ -27,7 +29,9 @@ export default function PlatformPage({ platformKey }) {
                 {platform.name}
               </h1>
               <p className="mt-3 max-w-3xl text-base leading-7 text-slate-300">
-                Mock mode — реальное API пока не подключено. Этот экран показывает будущую механику редактора, очереди публикаций и inbox комментариев.
+                {isThreads
+                  ? "Threads подключён первым: публикация поста и первого комментария идут через server-side route handlers, а очередь, inbox и AI-слой пока остаются в mock-режиме."
+                  : "Этот экран пока работает на mock-данных и показывает будущую механику редактора, очереди публикаций и inbox комментариев."}
               </p>
             </div>
 
@@ -42,7 +46,7 @@ export default function PlatformPage({ platformKey }) {
           <div className="mt-6 grid gap-4 sm:grid-cols-3">
             <StatCard label="Черновики" value={platform.drafts} helper="готово к доработке" />
             <StatCard label="В очереди" value={platform.scheduled} helper="ожидают слот" />
-            <StatCard label="Опубликовано" value={platform.published} helper="mock-статистика" />
+            <StatCard label="Опубликовано" value={platform.published} helper={isThreads ? "mix live / mock" : "mock-статистика"} />
           </div>
         </div>
       </section>
@@ -98,7 +102,9 @@ export default function PlatformPage({ platformKey }) {
         <div className="mb-4">
           <p className="text-lg font-semibold text-white">Комментарии</p>
           <p className="mt-2 text-sm text-slate-400">
-            Будущая зона inbox для комментариев пользователей и AI-подсказок ответа.
+            {isThreads
+              ? "Real replies sync will be connected after Threads comments endpoint/webhooks setup."
+              : "Будущая зона inbox для комментариев пользователей и AI-подсказок ответа."}
           </p>
         </div>
         <CommentsInbox comments={platform.comments} />
