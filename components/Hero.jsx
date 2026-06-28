@@ -42,7 +42,7 @@ export default function Hero() {
             className="hero-reveal mt-6 max-w-2xl text-xs font-semibold uppercase tracking-[0.16em] text-slate-400 sm:text-sm"
             style={{ "--hero-delay": "250ms" }}
           >
-            Быстро собираю рабочие цифровые продукты от идеи и сырого брифа до первой понятной версии.
+            Помогаю быстро запустить сайт, Telegram-бота или MVP, чтобы бизнес мог получать заявки, проверять идеи и автоматизировать рутину.
           </p>
 
           <div className="hero-reveal mt-9 flex flex-col gap-3 sm:flex-row" style={{ "--hero-delay": "350ms" }}>

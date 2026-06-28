@@ -141,7 +141,7 @@ export default function LinksPage() {
             {" "}для бизнеса.
           </h2>
           <p className="mt-2.5 text-sm leading-relaxed text-slate-400">
-            Быстро собираю рабочие цифровые продукты от идеи и сырого брифа до первой понятной версии.
+            Помогаю быстро запустить сайт, Telegram-бота или MVP, чтобы бизнес мог получать заявки, проверять идеи и автоматизировать рутину.
           </p>
           <div className="mt-4 flex flex-wrap justify-center gap-1.5">
             {[
