@@ -5,6 +5,14 @@ import { useEffect } from "react";
 import { contacts } from "../data/skills.js";
 
 export default function ProjectDetails({ project, onClose }) {
+  const openHref = project.primaryHref ?? project.youtubeHref;
+  const summary = project.caseStudy?.summary ?? project.cardSummary ?? project.description;
+  const sections = [
+    { heading: "Задача", text: project.caseStudy?.task },
+    { heading: "Что сделано", text: project.caseStudy?.done },
+    { heading: "Результат", text: project.caseStudy?.result },
+  ].filter((section) => section.text);
+
   useEffect(() => {
     const onKey = (e) => e.key === "Escape" && onClose();
     document.addEventListener("keydown", onKey);
@@ -31,8 +39,9 @@ export default function ProjectDetails({ project, onClose }) {
         {/* Шапка */}
         <div className="flex shrink-0 items-start justify-between gap-4 border-b border-white/10 p-5 sm:p-6">
           <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-cyan-300">О проекте</p>
+            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-cyan-300">Кейс</p>
             <h2 className="mt-1 text-xl font-semibold text-white">{project.title}</h2>
+            <p className="mt-3 max-w-xl text-sm leading-6 text-slate-300">{summary}</p>
           </div>
           <button
             type="button"
@@ -47,34 +56,37 @@ export default function ProjectDetails({ project, onClose }) {
         {/* Контент */}
         <div className="overflow-y-auto p-5 sm:p-6">
           <div className="grid gap-6">
-            {project.details.map((block) => (
-              <div key={block.heading}>
+            {sections.map((section) => (
+              <div key={section.heading}>
                 <p className="mb-3 text-xs font-semibold uppercase tracking-[0.16em] text-cyan-300/80">
-                  {block.heading}
+                  {section.heading}
                 </p>
-                <ul className="grid gap-2">
-                  {block.items.map((item) => (
-                    <li key={item} className="flex gap-3 text-sm leading-6 text-slate-300">
-                      <span className="mt-2 h-px w-4 shrink-0 bg-cyan-300/50" />
-                      {item}
-                    </li>
-                  ))}
-                </ul>
+                <p className="max-w-2xl text-sm leading-7 text-slate-300">
+                  {section.text}
+                </p>
               </div>
             ))}
           </div>
 
-          {/* CTA */}
-          <div className="mt-8 rounded-xl border border-cyan-300/20 bg-cyan-300/5 p-5">
-            <p className="text-sm font-semibold text-white">Нужен похожий проект?</p>
-            <p className="mt-1 text-sm text-slate-400">Напишите в Telegram — обсудим задачу и я расскажу как это будет работать в вашем случае.</p>
+          <div className="mt-8 flex flex-wrap gap-3">
+            {openHref ? (
+              <a
+                href={openHref}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex min-h-11 items-center gap-2 rounded-lg bg-white px-5 text-sm font-semibold text-slate-950 transition hover:bg-cyan-200 active:translate-y-px"
+              >
+                Открыть проект
+                <ArrowRight size={15} />
+              </a>
+            ) : null}
             <a
               href={contacts.telegram}
               target="_blank"
               rel="noreferrer"
-              className="mt-4 inline-flex min-h-11 items-center gap-2 rounded-lg bg-white px-5 text-sm font-semibold text-slate-950 transition hover:bg-cyan-200 active:translate-y-px"
+              className="inline-flex min-h-11 items-center gap-2 rounded-lg border border-cyan-300/24 px-5 text-sm font-semibold text-cyan-100 transition hover:bg-cyan-300/10 active:translate-y-px"
             >
-              Написать в Telegram
+              Хочу похожий проект
               <ArrowRight size={15} />
             </a>
           </div>
